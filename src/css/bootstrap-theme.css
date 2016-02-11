@@ -41,10 +41,7 @@ body {
   min-height: 100%;
   padding-top: 50px;
   font: 13px/17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #8b99a3;
-  letter-spacing: .08em; }
-  body.body-blue {
-    background: #f5f8f9; }
+  color: #8b99a3; }
 
 a {
   color: #8b99a3;
