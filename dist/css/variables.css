@@ -1,0 +1,9 @@
+/*
+ * Variables Styles
+ */
+.clearfix {
+  display: table;
+  content: '\0020';
+  clear: both; }
+
+/*# sourceMappingURL=variables.css.map */

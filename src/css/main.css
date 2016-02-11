@@ -1,0 +1,63 @@
+/*!
+ * Project: CloudBroadcast
+ * File: Main styles
+ */
+/*
+ * Variables Styles
+ */
+.clearfix {
+  display: table;
+  content: '\0020';
+  clear: both; }
+
+/* ==========================================================================
+   _FOOTER
+   ========================================================================== */
+.footer {
+  min-height: 344px;
+  padding: 30px 0;
+  color: #5b5a66;
+  background-color: #2e2d3c;
+  text-align: center;
+  cursor: default; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      padding: 54px 0 28px;
+      text-align: left; } }
+  .footer a {
+    color: #5b5a66;
+    transition: color 0.2s ease; }
+    .footer a:hover {
+      color: #fff; }
+  .footer .heading {
+    margin-bottom: 6px;
+    color: #6e6e79;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: bold;
+    text-transform: uppercase; }
+    @media screen and (min-width: 768px) {
+      .footer .heading {
+        margin-bottom: 12px; } }
+  .footer .list {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em; }
+    .footer .list li {
+      margin-bottom: 4px; }
+    @media screen and (min-width: 768px) {
+      .footer .list {
+        margin: 0;
+        font-size: 16px;
+        line-height: 22px; } }
+  .footer .copyright {
+    margin: 30px 0 0 0;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      .footer .copyright {
+        margin-top: 68px; } }
+
+/*# sourceMappingURL=main.css.map */
