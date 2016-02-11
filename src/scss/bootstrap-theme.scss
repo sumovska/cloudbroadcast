@@ -1,0 +1,565 @@
+/*!
+ * Project: CloudBroadcast
+ * File: Bootstrap theme styles
+ */
+@import "variables";
+/*====================================================================================*/
+/* 01 FONTS
+/*====================================================================================*/
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir-medium-webfont.eot');
+  src: url('../fonts/avenir-medium-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir-medium-webfont.woff') format('woff'), url('../fonts/avenir-medium-webfont.ttf') format('truetype'), url('../fonts/avenir-medium-webfont.svg#Avenir-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/avenir-heavy-webfont.eot');
+  src: url('../fonts/avenir-heavy-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir-heavy-webfont.woff') format('woff'), url('../fonts/avenir-heavy-webfont.ttf') format('truetype'), url('../fonts/avenir-heavy-webfont.svg#Avenir-Heavy') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+/*====================================================================================*/
+/* 02 GLOBAL SETTINGS
+/*====================================================================================*/
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  min-width: 320px;
+  height: 100%;
+  min-height: 100%;
+  padding-top: 50px;
+  font: 13px/17px $font-family;
+  color: $color-font;
+  letter-spacing: .08em;
+  &.body-blue {
+    background: $color-blue-lighter;
+  }
+}
+a {
+  color: $color-font;
+  text-decoration: none;
+  &:hover {
+    color: $color-blue;
+    text-decoration: none;
+  }
+  &:active, &.active, &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+h1, .h1 {
+  margin: 0 0 25px 0;
+  font-family: $font-family;
+  font-size: 32px;
+  font-weight: normal;
+  color: $color-blue-light;
+}
+h2, .h2 {
+  margin: 0 0 20px 0;
+  font-family: $font-family;
+  font-size: 28px;
+  font-weight: normal;
+  color: $color-blue-light;
+}
+h3, .h3 {
+  margin: 0 0 20px 0;
+  font-family: $font-family;
+  font-size: 24px;
+  font-weight: normal;
+  color: $color-blue-light;
+}
+h4, .h4 {
+  margin: 0 0 20px 0;
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: normal;
+  color: $color-blue-light;
+}
+h5, .h5 {
+  margin: 0 0 20px 0;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: normal;
+  color: $color-blue-light;
+}
+@media screen and (min-width: $breakpoint-sm) {
+  body {
+    padding-top: 0;
+    font-size: 14px;
+    line-height: 19px;
+    &.body-interface {
+      padding-top: 110px;
+    }
+  }
+  h1, .h1 { font-size: 40px; }
+  h2, .h2 { font-size: 34px; }
+  h3, .h3 { font-size: 28px; }
+  h4, .h4 { font-size: 24px; }
+  h5, .h5 { font-size: 18px; }
+}
+/*====================================================================================*/
+/* 03 NAVBAR
+/*====================================================================================*/
+.navbar {
+  min-height: 50px;
+  padding: 5px 0;
+  margin-bottom: 0;
+  border: none;
+  cursor: default;
+  background: $color-header;
+  @media (min-width: $breakpoint-sm) {
+    height: 110px;
+    padding: 30px 0;
+    border-radius: 0;
+  }
+
+  &.navbar-inverse {
+    background: $color-dark;
+    .navbar-nav {
+      li {
+        a {
+          color: $color-gray-dark;
+          transition: color $delay;
+          &:hover {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+
+  &.navbar-fixed-top {
+  .body-interface & {
+    border-bottom: 1px solid $color-gray-lighter;
+  }
+    @media (min-width: $breakpoint-sm) {
+      position: relative;
+      .body-interface & {
+        position: fixed;
+        border-bottom: none;
+      }
+    }
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  > .container, > .container-fluid {
+    .navbar-brand {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      margin: 5px 0 5px 20px;
+      display: block;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      @media (min-width: $breakpoint-sm) {
+        width: 60px;
+        height: 60px;
+        margin: 0 0 -20px -6px;
+        top: -6px;
+        float: none;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    margin: 4px 15px 4px 0;
+    border: none;
+    border-radius: 0;
+    .icon-bar {
+      background: $color-blue;
+    }
+  }
+
+  .settings {
+    position: absolute;
+    right: 15px;
+    top: -35px;
+    @media screen and (min-width: $breakpoint-sm) {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+
+    .dropdown-toggle {
+      color: $color-blue-medium;
+      font-size: 13px;
+      line-height: 18px;
+      &:hover {
+        color: $color-blue;
+      }
+
+      .avatar {
+        width: 30px;
+        height: 30px;
+        @media screen and (min-width: $breakpoint-sm) {
+          width: 60px;
+          height: 60px;
+          margin: -5px 10px -5px 0;
+        }
+      }
+    }
+
+    .btn-group.open > .dropdown-toggle {
+      box-shadow: none;
+      background: transparent;
+      color: $color-blue;
+    }
+
+    .caret {
+      margin-left: 6px;
+      border-top: 5px dashed;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+    }
+
+    .dropdown-menu {
+      min-width: 100%;
+      margin-top: 20px;
+      padding: 0;
+      font-size: 13px;
+      line-height: 18px;
+      background: $color-white;
+      border: none;
+      box-shadow: none;
+      left: auto;
+      right: 0;
+      @media screen and (min-width: $breakpoint-sm) {
+        left: 0;
+        right: auto
+      }
+      &:before {
+        width: 0;
+        height: 0;
+        display: block;
+        content: '\0020';
+        overflow: hidden;
+        border-style: solid;
+        border-width: 0 8px 3px 8px;
+        border-color: transparent transparent $color-white transparent;
+        position: absolute;
+        right: 20px;
+        top: -3px;
+      }
+
+      li {
+        border-bottom: 1px solid $color-gray-lighter;
+        a {
+          padding-top: 14px;
+          padding-bottom: 14px;
+          letter-spacing: 0.02em;
+          color: $color-blue-medium;
+          .icon {
+            width: 18px;
+            height: 18px;
+            margin-right: 6px;
+            display: inline-block;
+            position: relative;
+            top: -3px;
+          }
+          &:hover {
+            color: $color-blue;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .body-interface & {
+    .navbar-brand {
+      margin-left: 0;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      &:before {
+        width: 25%;
+        display: block;
+        content: '\0020';
+        overflow: hidden;
+        background: $color-darker;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      > .container-fluid {
+        position: relative;
+        z-index: 2;
+        .navbar-header {
+          float: none;
+          .navbar-brand {
+            margin: 0 auto;
+
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      &:before {
+        width: 16.66%;
+      }
+    }
+
+    .space {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    .navbar-right {
+      margin-right: 0;
+    }
+
+    .navbar-left {
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.navbar-buttons {
+  padding-bottom: 20px;
+  text-align: center;
+
+  .link {
+    max-width: 200px;
+    padding: 15px;
+    margin: 5px auto;
+    display: block;
+    vertical-align: middle;
+    color: $color-gray-dark;
+    transition: color $delay;
+
+    &:hover {
+      color: $color-white;
+    }
+    @media (min-width: $breakpoint-sm) {
+      max-width: none;
+      margin: 0 10px 0 0;
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    padding-bottom: 0;
+    margin-left: 80px;
+    text-align: left;
+  }
+}
+/*====================================================================================*/
+/* 05 BUTTONS
+/*====================================================================================*/
+.btn {
+  min-width: 144px;
+  padding: 18px 50px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  color: $color-gray-light;
+  border: none;
+  background: $color-white;
+  border-radius: 100px;
+  transition: background-color $delay, color $delay;
+
+  &:focus, &:active, &:active:focus, &.active:focus, &.focus, &:active.focus, &.btn.active.focus {
+    outline: none;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17);
+  }
+  &:hover, &:focus, &.focus, &:hover {
+    color: $color-gray-light;
+    text-decoration: none;
+  }
+
+  &.btn-default, &.btn-default:active, &.btn-default.active, &.btn-default:hover, &.btn-default:focus, &.btn-default.focus, &.btn-default:hover, .open > &.dropdown-toggle.btn-default {
+    color: $color-gray-light;
+    border-color: transparent;
+    background: $color-white;
+  }
+
+  &.btn-square {
+    border-radius: 0;
+  }
+
+  &.btn-primary {
+    color: $color-white;
+    background: $color-blue;
+    &:active, &.active {
+      &, &:hover {
+        background: $color-blue;
+        box-shadow: 0 2px 6px 0 rgba(71, 183, 227, 0.7);
+      }
+    }
+  }
+
+  &.btn-bordered {
+    background: transparent;
+    color: $color-white;
+    border: 1px solid $color-white;
+    &:hover {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+
+  &.btn-gray-bordered {
+    background: transparent;
+    border: 1px solid #e7e7e7;
+    &:hover {
+      background: $color-white;
+    }
+  }
+
+  &.btn-primary-bordered {
+    color: $color-blue;
+    border: 1px solid $color-blue;
+    &:hover {
+      color: $color-white;
+      background-color: $color-blue;
+    }
+  }
+
+  &.btn-blue {
+    color: $color-white;
+    background: #4a669e;
+  }
+
+  &.btn-success {
+    color: $color-white;
+    background: $color-green;
+    &:active, &.active {
+      &, &:hover {
+        background: $color-green;
+        box-shadow: 0 2px 6px 0 rgba(130, 193, 37, 0.70);
+      }
+    }
+  }
+
+  &.btn-danger {
+    color: $color-white;
+    background: $color-red;
+    &:active, &.active {
+      &, &:hover {
+        background: $color-red;
+        box-shadow: 0 2px 6px 0 rgba(230, 72, 58, 0.70);
+      }
+    }
+  }
+
+  &.btn-medium {
+    min-width: 220px;
+  }
+
+  &.btn-sm {
+    padding: 14px 30px;
+  }
+
+  &.btn-xs {
+    padding: 12px 20px;
+  }
+
+  &.btn-icon {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    .glyphicon {
+      margin-right: 18px;
+    }
+  }
+
+}
+.buttons-group {
+  margin-bottom: 15px;
+  text-align: center;
+  @media screen and (min-width: $breakpoint-sm) {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin: 10px auto;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 0 20px;
+    }
+  }
+
+  &.buttons-group-right {
+    @media screen and (min-width: $breakpoint-sm) {
+      text-align: right;
+      .btn {
+        margin-right: 0;
+      }
+    }
+  }
+}
+/*====================================================================================*/
+/* 06 JUMBOTRON
+/*====================================================================================*/
+.jumbotron {
+  height: 100%;
+  margin-bottom: 0;
+  padding: 25px 0 15px;
+  color: $color-white;
+  cursor: default;
+  text-align: center;
+  background-color: $color-blue;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  @media screen and (min-width: $breakpoint-sm) {
+    padding-bottom: 78px;
+    height: 500px;
+  }
+
+  .container {
+    height: 100%;
+    display: table;
+    .row {
+      display: table-cell;
+      vertical-align: middle;
+      @media screen and (min-width: $breakpoint-sm) {
+        vertical-align: bottom;
+      }
+    }
+  }
+
+  h1, .h1 {
+    margin-bottom: 18px;
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 35px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: normal;
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .btn {
+    margin-top: 26px;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 46px;
+    }
+  }
+}

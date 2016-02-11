@@ -1,0 +1,36 @@
+/*
+ * Variables Styles
+ */
+
+$font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$color-font: #8b99a3;
+$color-header: #fbfbfb;
+$color-white: #fff;
+$color-light: #f8f8f8;
+$color-green: #82c125;
+$color-blue-dark: #43a5cb;
+$color-blue: #47b7e3;
+$color-blue-bright: #41c9ff;
+$color-blue-cloudy: #9fadb2;
+$color-blue-medium: #b3c3ca;
+$color-blue-light: #b3c8d0;
+$color-blue-lighter: #f5f8f9;
+$color-gray-lighter: #efefef;
+$color-gray-bright: #f2f2f2;
+$color-gray-brighter: #ccc;
+$color-gray-light: #a5a5a5;
+$color-gray: #6e6e79;
+$color-gray-dark: #5b5a66;
+$color-dark: #2e2d3c;
+$color-darker: #313043;
+$color-red: #e6483a;
+
+$delay: .2s ease;
+
+$breakpoint-xs: 568px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+
+.clearfix { display: table; content: '\0020'; clear: both; }

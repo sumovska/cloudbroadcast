@@ -1,0 +1,65 @@
+/*!
+ * Project: CloudBroadcast
+ * File: Main styles
+ */
+@import "variables";
+/* ==========================================================================
+   _FOOTER
+   ========================================================================== */
+.footer {
+  min-height: 344px;
+  padding: 30px 0;
+  color: $color-gray-dark;
+  background-color: $color-dark;
+  text-align: center;
+  cursor: default;
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 54px 0 28px;
+    text-align: left;
+  }
+
+  a {
+    color: $color-gray-dark;
+    transition: color $delay;
+    &:hover {
+      color: $color-white;
+    }
+  }
+
+  .heading {
+    margin-bottom: 6px;
+    color: $color-gray;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .list {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    li {
+      margin-bottom: 4px;
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .copyright {
+    margin: 30px 0 0 0;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 68px;
+    }
+  }
+}

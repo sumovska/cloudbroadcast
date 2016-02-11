@@ -1,0 +1,479 @@
+/*!
+ * Project: Roozio
+ * File: Interface styles
+ */
+@import "variables";
+/* ==========================================================================
+   _SIDEBAR
+   ========================================================================== */
+.sidebar {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @media screen and (min-width: $breakpoint-sm) {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    position: fixed;
+    left: 0;
+    top: 110px;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: $color-gray-dark;
+    background: $color-dark;
+  }
+
+  .nav-sidebar {
+    font-weight: bold;
+    background: $color-white;
+    position: relative;
+    font-size: 14px;
+    &:before {
+      width: 0;
+      height: 0;
+      display: block;
+      content: '\0020';
+      overflow: hidden;
+      border-style: solid;
+      border-width: 6px 6px 0 6px;
+      border-color: $color-blue transparent transparent transparent;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+    }
+    &.open {
+      &:before {
+        transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+      }
+    }
+    @media screen and (min-width: $breakpoint-sm) {
+      padding: 70px 20px;
+      background: transparent;
+      &:before {
+        display: none;
+      }
+    }
+
+    li {
+      display: none;
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-bottom: 4px;
+        display: block;
+      }
+
+      a {
+        padding: 15px 15px 15px 42px;
+        color: $color-gray-dark;
+        position: relative;
+
+        &:before {
+          width: 20px;
+          height: 20px;
+          display: block;
+          content: '\0020';
+          overflow: hidden;
+          position: absolute;
+          left: 15px;
+          top: 12px;
+          background-image: url("../img/icons/badges-sprite.png");
+          background-position: -25px 0;
+          background-size: cover;
+        }
+
+        &:hover, &:active {
+          background: none;
+        }
+
+        @media screen and (min-width: $breakpoint-sm) {
+          padding: 10px 15px 10px 26px;
+          &:before {
+            left: 0;
+            top: 8px;
+          }
+          &:hover {
+            color: $color-white;
+            background: transparent;
+            &:before {
+              background-position: 0 0;
+            }
+          }
+        }
+      }
+      &.active, &:active, &:focus, &.focus, > a:focus, > a:active, > a.active {
+        background: none;
+      }
+      &.active, &:active {
+        display: block;
+        a, a:active {
+          color: $color-blue;
+          background: none;
+          &:before {
+            background-position: -50px 0;
+          }
+        }
+      }
+    }
+
+    &.open {
+      li {
+        display: block;
+      }
+    }
+    &.nav-sidebar-visible {
+      &:before {
+        display: none;
+      }
+      li {
+        &:first-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+}
+/* ==========================================================================
+   _MAIN
+   ========================================================================== */
+.main {
+  margin-top: 20px;
+  @media screen and (min-width: $breakpoint-md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 34px 60px;
+  }
+}
+/* ==========================================================================
+   _STATUS
+   ========================================================================== */
+.status-icon {
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  border-radius: 50%;
+
+  &.status-icon-green {
+    background: $color-green;
+    box-shadow: 0 2px 20px 0 #82C125;
+  }
+}
+/* ==========================================================================
+   _CONTESTS-LIST
+   ========================================================================== */
+.contests-list {
+  margin-bottom: 25px;
+  font-size: 13px;
+  line-height: 17px;
+  @media screen and (min-width: $breakpoint-sm) {
+    margin-bottom: 65px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .item {
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    background: $color-white;
+    border: 1px solid $color-gray-bright;
+    @media screen and (min-width: $breakpoint-sm) {
+      padding: 30px;
+    }
+    a{
+      &:hover {
+        color: $color-font;
+      }
+    }
+  }
+
+  .time {
+    margin-top: 15px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
+    display: block;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 2px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .icon {
+      width: 10px;
+      height: 10px;
+      margin-right: 2px;
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        top: -3px;
+      }
+    }
+  }
+}
+/* ==========================================================================
+   _PROFILE
+   ========================================================================== */
+.profile {
+  .avatar {
+    text-align: center;
+    margin-bottom: 20px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin: 30px 0 60px;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 30px;
+      display: block;
+    }
+
+    .btn {
+      max-width: 184px;
+      margin: 0 auto 6px;
+      display: block;
+      letter-spacing: .06em;
+    }
+  }
+
+  .checkbox-legend {
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 30px;
+    }
+  }
+
+  .form-group-submit {
+    margin-top: 30px;
+    @media screen and (min-width: $breakpoint-md) {
+      margin-top: 60px;
+    }
+
+    .btn {
+      min-width: 224px;
+    }
+  }
+}
+/* ==========================================================================
+   _WINNERS-LIST
+   ========================================================================== */
+.winners-list {
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .item {
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    text-align: center;
+    background: $color-white;
+    box-shadow: 0 1px 6px 0 rgba(229, 229, 229, 0.50);
+    @media screen and (min-width: $breakpoint-sm) {
+      text-align: left;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 20px 30px;
+    }
+  }
+  .checkbox-name {
+    white-space: nowrap;
+  }
+  .btn {
+    min-width: 230px;
+    @media screen and (min-width: $breakpoint-sm) {
+      min-width: 0;
+      float: right;
+    }
+  }
+}
+/* ==========================================================================
+   _FORM-CREATE
+   ========================================================================== */
+.form-create {
+  @media screen and (min-width: $breakpoint-lg) {
+    margin-top: 50px;
+    .block {
+      margin-bottom: 40px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    .checkbox-block {
+      margin-top: 0;
+      @media screen and (min-width: $breakpoint-lg) {
+        margin: 0;
+        padding: 14px 0;
+      }
+
+    }
+  }
+
+  .btn-icon {
+    font-weight: normal;
+  }
+  .help-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+/* Counter of amount */
+.count {
+  position: relative;
+  input, .form-control {
+    width: 100%;
+  }
+  .up, .down {
+    width: 20px;
+    display: block;
+    position: absolute;
+    right: 6px;
+    cursor: pointer;
+    background: $color-blue;
+    z-index: 10;
+    &:before, &:after {
+      width: 2px;
+      height: 5px;
+      display: block;
+      content: ' ';
+      overflow: hidden;
+      clear: both;
+      background: $color-white;
+      position: absolute;
+    }
+    &:before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    &:after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+  }
+  .up {
+    top: 8px;
+    bottom: 50%;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    &:before {
+      left: 8px;
+      top: 6px;
+    }
+    &:after {
+      left: 11px;
+      top: 6px;
+    }
+  }
+  .down {
+    top: 50%;
+    bottom: 8px;
+    border-radius: 0 0 4px 4px;
+    &:before {
+      left: 11px; top:6px;
+    }
+    &:after {
+      left: 8px; top: 6px;
+    }
+  }
+}
+/* ==========================================================================
+   _POPUP
+   ========================================================================== */
+.popup {
+  padding: 34px;
+  background: $color-white;
+  position: relative;
+  &.popup-upload {
+    max-width: 550px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: center;
+    .heading {
+      margin-bottom: 30px;
+    }
+  }
+  .mfp-close {
+    width: 40px;
+    height: 40px;
+    color: $color-font;
+    border-radius: 50%;
+    background: $color-white;
+    top: -20px;
+    right: -20px;
+    opacity: 1;
+    box-shadow: 0 1px 6px 0 rgba(229,229,229,0.50);
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+/* ==========================================================================
+   _ICHECKBOX
+   ========================================================================== */
+.icheckbox {
+  margin: -5px 12px 0 0;
+  display: inline-block;
+  *display: inline;
+  vertical-align: middle;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: none;
+  cursor: pointer;
+  border: 1px solid $color-gray-brighter;
+  &.checked {
+    &:before {
+      width: 11px;
+      height: 11px;
+      margin: -5px 0 0 -5px;
+      display: block;
+      content: '\0020';
+      overflow: hidden;
+      background: url("../img/icons/check.png") 0 0 no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+    }
+  }
+  &.disabled {
+    background-position: -44px 0;
+    cursor: default;
+  }
+  &.checked.disabled {
+    background-position: -66px 0;
+  }
+}
+/* ==========================================================================
+   _DROPZONE
+   ========================================================================== */
+.dropzone {
+  background: $color-white;
+  border: 2px dashed $color-gray-bright;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default, .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div.xdsoft_current {
+  background: $color-blue;
+  box-shadow: $color-blue 0 1px 3px 0 inset;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box >div >div:hover {
+  background: $color-green !important;
+  box-shadow: none !important;
+}
