@@ -5,16 +5,20 @@
 $font-generic: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-myriad: 'Myriad Pro', Helvetica, Arial, sans-serif;
 
-$color-dark: #22262b;
-$color-light: #f8f8f8;
+$color-black: #000;
+$color-darkest: #22262b;
+$color-darker: #3c424a;
+$color-dark: #414953;
 $color-gray: #8d8d8d;
+$color-light: #f8f8f8;
+$color-white: #fff;
+
+$color-blue: #5a7de6;
 
 $color-font: #8b99a3;
 $color-header: #fbfbfb;
-$color-white: #fff;
 $color-green: #82c125;
 $color-blue-dark: #43a5cb;
-$color-blue: #47b7e3;
 $color-blue-bright: #41c9ff;
 $color-blue-cloudy: #9fadb2;
 $color-blue-medium: #b3c3ca;
@@ -22,11 +26,9 @@ $color-blue-light: #b3c8d0;
 $color-blue-lighter: #f5f8f9;
 $color-gray-lighter: #efefef;
 $color-gray-bright: #f2f2f2;
-$color-gray-brighter: #ccc;
 $color-gray-light: #a5a5a5;
 $color-gray-dark: #5b5a66;
 
-$color-darker: #313043;
 $color-red: #e6483a;
 
 $duration: .2s ease;
@@ -36,4 +38,8 @@ $breakpoint-sm: 768px;
 $breakpoint-md: 992px;
 $breakpoint-lg: 1200px;
 
-.clearfix { display: table; content: '\0020'; clear: both; }
+@mixin clearfix {
+  content: '\0020';
+  display: table;
+  clear: both;
+}

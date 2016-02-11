@@ -5,11 +5,6 @@
 /*
  * Variables Styles
  */
-.clearfix {
-  display: table;
-  content: '\0020';
-  clear: both; }
-
 /*====================================================================================*/
 /* FOOTER
 /*====================================================================================*/
@@ -24,8 +19,7 @@
     .footer {
       padding: 35px 0; } }
   .footer a {
-    color: #8d8d8d;
-    transition: color 0.2s ease; }
+    color: #8d8d8d; }
     .footer a:hover {
       color: #fff; }
   .footer .heading {
@@ -49,7 +43,7 @@
         margin-bottom: 0; } }
   .footer .copyright {
     padding-top: 20px;
-    border-top: 1px solid #3c424a;
+    border-top: 1px solid #414953;
     margin-top: 20px;
     text-align: center; }
     @media screen and (min-width: 768px) {

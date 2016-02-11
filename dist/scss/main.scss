@@ -10,7 +10,7 @@
   padding: 20px 0;
   font-family: $font-myriad;
   color: $color-gray;
-  background: $color-dark;
+  background: $color-darkest;
   font-size: 13px;
   cursor: default;
 
@@ -20,7 +20,6 @@
 
   a {
     color: $color-gray;
-    transition: color $duration;
     &:hover { color: $color-white; }
   }
 
@@ -50,7 +49,7 @@
 
   .copyright {
     padding-top: 20px;
-    border-top: 1px solid #3c424a;
+    border-top: 1px solid $color-dark;
     margin-top: 20px;
     text-align: center;
 

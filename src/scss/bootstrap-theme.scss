@@ -34,324 +34,157 @@ body {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  padding-top: 50px;
   font: 13px/17px $font-generic;
-  color: $color-font;
+  color: $color-darkest;
+  background: $color-white;
 }
 a {
   color: $color-font;
   text-decoration: none;
-  &:hover { color: $color-blue; text-decoration: none; }
+  transition: color $duration;
+  &:hover { color: $color-darkest; text-decoration: none; }
   &:active, &.active, &:hover, &:focus { text-decoration: none; }
 }
-h1, .h1 {
-  margin: 0 0 25px 0;
+.clearfix { @include clearfix; }
+.h-default {
+  margin: 0;
   font-family: $font-generic;
-  font-size: 32px;
   font-weight: normal;
-  color: $color-blue-light;
+  font-style: normal;
+  line-height: normal;
+  color: $color-blue;
 }
-h2, .h2 {
-  margin: 0 0 20px 0;
-  font-family: $font-generic;
-  font-size: 28px;
-  font-weight: normal;
-  color: $color-blue-light;
-}
-h3, .h3 {
-  margin: 0 0 20px 0;
-  font-family: $font-generic;
-  font-size: 24px;
-  font-weight: normal;
-  color: $color-blue-light;
-}
-h4, .h4 {
-  margin: 0 0 20px 0;
-  font-family: $font-generic;
-  font-size: 20px;
-  font-weight: normal;
-  color: $color-blue-light;
-}
-h5, .h5 {
-  margin: 0 0 20px 0;
-  font-family: $font-generic;
-  font-size: 16px;
-  font-weight: normal;
-  color: $color-blue-light;
-}
-@media screen and (min-width: $breakpoint-sm) {
-  body {
-    padding-top: 0;
-    font-size: 14px;
-    line-height: 19px;
-    &.body-interface {
-      padding-top: 110px;
-    }
-  }
-  h1, .h1 { font-size: 40px; }
-  h2, .h2 { font-size: 34px; }
-  h3, .h3 { font-size: 28px; }
-  h4, .h4 { font-size: 24px; }
-  h5, .h5 { font-size: 18px; }
-}
+h1, .h1 { @extend .h-default; margin-bottom: 25px; font-size: 24px; }
+h2, .h2 { @extend .h-default; margin-bottom: 20px; font-size: 28px; }
+h3, .h3 { @extend .h-default; margin-bottom: 20px; font-size: 24px; }
+h4, .h4 { @extend .h-default; margin-bottom: 20px; font-size: 20px; }
+h5, .h5 { @extend .h-default; margin-bottom: 20px; font-size: 18px; }
+h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 /*====================================================================================*/
 /* 03 NAVBAR
 /*====================================================================================*/
 .navbar {
   min-height: 50px;
-  padding: 5px 0;
-  margin-bottom: 0;
+  padding: 0;
   border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-family: $font-myriad;
+  color: $color-darkest;
+  background: $color-light;
   cursor: default;
-  background: $color-header;
-  @media (min-width: $breakpoint-sm) {
-    height: 110px;
-    padding: 30px 0;
+
+  @media (min-width: $breakpoint-md) {
+    height: 65px;
+    padding: 10px 0;
     border-radius: 0;
   }
 
-  &.navbar-inverse {
-    background: $color-dark;
-    .navbar-nav {
-      li {
-        a {
-          color: $color-gray-dark;
-          transition: color $duration;
-          &:hover {
-            color: $color-white;
-          }
+  .navbar-nav {
+    font-size: 14px;
+
+    @media (min-width: $breakpoint-sm) {
+      margin: 9px 0;
+      font-size: 13px;
+    }
+    @media (min-width: $breakpoint-md) {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    > li {
+      @media (min-width: $breakpoint-sm) {
+        margin: 0 2px;
+      }
+
+      > a {
+        padding: 10px 20px;
+        line-height: normal;
+
+        @media (min-width: $breakpoint-sm) {
+          padding: 5px 10px;
+          border-radius: 5px;
+          line-height: 22px;
+        }
+        @media (min-width: $breakpoint-md) {
+          height: 40px;
+          padding: 10px 20px;
+          margin: 2px 0;
+        }
+      }
+
+      &.separator {
+        padding-top: 8px;
+        border-top: 1px solid $color-darker;
+        margin-top: 8px;
+        box-shadow: 0 -1px $color-black;
+
+        @media (min-width: $breakpoint-sm) {
+          padding-left: 4px;
+          padding-top: 0;
+          border-top: none;
+          border-left: 1px solid $color-darker;
+          margin-top: 0;
+          margin-left: 4px;
+          box-shadow: -1px 0 $color-black;
         }
       }
     }
   }
 
-  &.navbar-fixed-top {
-    .body-interface & {
-      border-bottom: 1px solid $color-gray-lighter;
-    }
-    @media (min-width: $breakpoint-sm) {
-      position: relative;
-      .body-interface & {
-        position: fixed;
-        border-bottom: none;
+  &.navbar-inverse {
+    color: $color-gray;
+    background: $color-darkest;
+
+    .navbar-nav {
+      > li {
+        > a {
+          color: $color-light;
+          transition: color $duration, background-color $duration;
+          &:focus, &:hover { color: $color-white; background-color: $color-dark; }
+        }
       }
     }
   }
 
-  .navbar-nav {
-    text-align: center;
-  }
-
   > .container, > .container-fluid {
     .navbar-brand {
-      width: 30px;
-      height: 30px;
+      width: 114px;
+      height: 40px;
       padding: 0;
       margin: 5px 0 5px 20px;
       display: block;
       position: relative;
+
+      @media (min-width: $breakpoint-sm) {
+        margin-left: 0;
+      }
+      @media (min-width: $breakpoint-md) {
+        width: 185px;
+        height: 65px;
+        margin-top: -10px;
+        margin-bottom: -10px;
+      }
+
       img {
         width: 100%;
         height: 100%;
         display: block;
       }
-      @media (min-width: $breakpoint-sm) {
-        width: 60px;
-        height: 60px;
-        margin: 0 0 -20px -6px;
-        top: -6px;
-        float: none;
-      }
     }
   }
 
   .navbar-toggle {
-    margin: 4px 15px 4px 0;
+    margin: 7px 15px 7px 0;
     border: none;
-    border-radius: 0;
-    .icon-bar {
-      background: $color-blue;
-    }
-  }
+    transition: background-color $duration;
 
-  .settings {
-    position: absolute;
-    right: 15px;
-    top: -35px;
-    @media screen and (min-width: $breakpoint-sm) {
-      position: relative;
-      top: auto;
-      right: auto;
-    }
-
-    .dropdown-toggle {
-      color: $color-blue-medium;
-      font-size: 13px;
-      line-height: 18px;
-      &:hover {
-        color: $color-blue;
-      }
-
-      .avatar {
-        width: 30px;
-        height: 30px;
-        @media screen and (min-width: $breakpoint-sm) {
-          width: 60px;
-          height: 60px;
-          margin: -5px 10px -5px 0;
-        }
-      }
-    }
-
-    .btn-group.open > .dropdown-toggle {
-      box-shadow: none;
-      background: transparent;
-      color: $color-blue;
-    }
-
-    .caret {
-      margin-left: 6px;
-      border-top: 5px dashed;
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent;
-    }
-
-    .dropdown-menu {
-      min-width: 100%;
-      margin-top: 20px;
-      padding: 0;
-      font-size: 13px;
-      line-height: 18px;
-      background: $color-white;
-      border: none;
-      box-shadow: none;
-      left: auto;
-      right: 0;
-      @media screen and (min-width: $breakpoint-sm) {
-        left: 0;
-        right: auto
-      }
-      &:before {
-        width: 0;
-        height: 0;
-        display: block;
-        content: '\0020';
-        overflow: hidden;
-        border-style: solid;
-        border-width: 0 8px 3px 8px;
-        border-color: transparent transparent $color-white transparent;
-        position: absolute;
-        right: 20px;
-        top: -3px;
-      }
-
-      li {
-        border-bottom: 1px solid $color-gray-lighter;
-        a {
-          padding-top: 14px;
-          padding-bottom: 14px;
-          letter-spacing: 0.02em;
-          color: $color-blue-medium;
-          .icon {
-            width: 18px;
-            height: 18px;
-            margin-right: 6px;
-            display: inline-block;
-            position: relative;
-            top: -3px;
-          }
-          &:hover {
-            color: $color-blue;
-            background: transparent;
-          }
-        }
-      }
-    }
-  }
-
-  .body-interface & {
-    .navbar-brand {
-      margin-left: 0;
-    }
-    @media screen and (min-width: $breakpoint-sm) {
-      &:before {
-        width: 25%;
-        display: block;
-        content: '\0020';
-        overflow: hidden;
-        background: $color-darker;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 0;
-      }
-
-      > .container-fluid {
-        position: relative;
-        z-index: 2;
-        .navbar-header {
-          float: none;
-          .navbar-brand {
-            margin: 0 auto;
-          }
-        }
-      }
-    }
-
-    @media screen and (min-width: $breakpoint-lg) {
-      &:before {
-        width: 16.66%;
-      }
-    }
-
-    .space {
-      padding-left: 60px;
-      padding-right: 60px;
-    }
-
-    .navbar-right {
-      margin-right: 0;
-    }
-
-    .navbar-left {
-      &:first-of-type {
-        margin-left: 0;
-      }
-    }
-  }
-}
-.navbar-buttons {
-  padding-bottom: 20px;
-  text-align: center;
-
-  .link {
-    max-width: 200px;
-    padding: 15px;
-    margin: 5px auto;
-    display: block;
-    vertical-align: middle;
-    color: $color-gray-dark;
-    transition: color $duration;
-
-    &:hover {
-      color: $color-white;
-    }
-    @media (min-width: $breakpoint-sm) {
-      max-width: none;
-      margin: 0 10px 0 0;
-      display: inline-block;
-    }
-  }
-
-  @media (min-width: $breakpoint-sm) {
-    padding-bottom: 0;
-    margin-left: 80px;
-    text-align: left;
+    &:focus, &:hover { background: $color-dark; }
+    .icon-bar { height: 3px; background: $color-blue; }
   }
 }
 /*====================================================================================*/
-/* 05 BUTTONS
+/* 04 BUTTONS
 /*====================================================================================*/
 .btn {
   min-width: 144px;
@@ -472,32 +305,8 @@ h5, .h5 {
   }
 
 }
-.buttons-group {
-  margin-bottom: 15px;
-  text-align: center;
-  @media screen and (min-width: $breakpoint-sm) {
-    margin-bottom: 30px;
-  }
-
-  .btn {
-    margin: 10px auto;
-
-    @media screen and (min-width: $breakpoint-sm) {
-      margin: 0 20px;
-    }
-  }
-
-  &.buttons-group-right {
-    @media screen and (min-width: $breakpoint-sm) {
-      text-align: right;
-      .btn {
-        margin-right: 0;
-      }
-    }
-  }
-}
 /*====================================================================================*/
-/* 06 JUMBOTRON
+/* 05 JUMBOTRON
 /*====================================================================================*/
 .jumbotron {
   height: 100%;

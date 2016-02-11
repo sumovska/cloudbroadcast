@@ -5,11 +5,6 @@
 /*
  * Variables Styles
  */
-.clearfix {
-  display: table;
-  content: '\0020';
-  clear: both; }
-
 /*====================================================================================*/
 /* 01 FONTS
 /*====================================================================================*/
@@ -39,266 +34,156 @@ body {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  padding-top: 50px;
   font: 13px/17px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #8b99a3; }
+  color: #22262b;
+  background: #fff; }
 
 a {
   color: #8b99a3;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.2s ease; }
   a:hover {
-    color: #47b7e3;
+    color: #22262b;
     text-decoration: none; }
   a:active, a.active, a:hover, a:focus {
     text-decoration: none; }
 
-h1, .h1 {
-  margin: 0 0 25px 0;
+.clearfix {
+  content: '\0020';
+  display: table;
+  clear: both; }
+
+.h-default, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 32px;
   font-weight: normal;
-  color: #b3c8d0; }
+  font-style: normal;
+  line-height: normal;
+  color: #5a7de6; }
+
+h1, .h1 {
+  margin-bottom: 25px;
+  font-size: 24px; }
 
 h2, .h2 {
-  margin: 0 0 20px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 28px;
-  font-weight: normal;
-  color: #b3c8d0; }
+  margin-bottom: 20px;
+  font-size: 28px; }
 
 h3, .h3 {
-  margin: 0 0 20px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: #b3c8d0; }
+  margin-bottom: 20px;
+  font-size: 24px; }
 
 h4, .h4 {
-  margin: 0 0 20px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: normal;
-  color: #b3c8d0; }
+  margin-bottom: 20px;
+  font-size: 20px; }
 
 h5, .h5 {
-  margin: 0 0 20px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: normal;
-  color: #b3c8d0; }
+  margin-bottom: 20px;
+  font-size: 18px; }
 
-@media screen and (min-width: 768px) {
-  body {
-    padding-top: 0;
-    font-size: 14px;
-    line-height: 19px; }
-    body.body-interface {
-      padding-top: 110px; }
+h6, .h6 {
+  margin-bottom: 20px;
+  font-size: 16px; }
 
-  h1, .h1 {
-    font-size: 40px; }
-
-  h2, .h2 {
-    font-size: 34px; }
-
-  h3, .h3 {
-    font-size: 28px; }
-
-  h4, .h4 {
-    font-size: 24px; }
-
-  h5, .h5 {
-    font-size: 18px; } }
 /*====================================================================================*/
 /* 03 NAVBAR
 /*====================================================================================*/
 .navbar {
   min-height: 50px;
-  padding: 5px 0;
-  margin-bottom: 0;
+  padding: 0;
   border: none;
-  cursor: default;
-  background: #fbfbfb; }
-  @media (min-width: 768px) {
+  border-radius: 0;
+  margin-bottom: 0;
+  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+  color: #22262b;
+  background: #f8f8f8;
+  cursor: default; }
+  @media (min-width: 992px) {
     .navbar {
-      height: 110px;
-      padding: 30px 0;
+      height: 65px;
+      padding: 10px 0;
       border-radius: 0; } }
-  .navbar.navbar-inverse {
-    background: #22262b; }
-    .navbar.navbar-inverse .navbar-nav li a {
-      color: #5b5a66;
-      transition: color 0.2s ease; }
-      .navbar.navbar-inverse .navbar-nav li a:hover {
-        color: #fff; }
-  .body-interface .navbar.navbar-fixed-top {
-    border-bottom: 1px solid #efefef; }
-  @media (min-width: 768px) {
-    .navbar.navbar-fixed-top {
-      position: relative; }
-      .body-interface .navbar.navbar-fixed-top {
-        position: fixed;
-        border-bottom: none; } }
   .navbar .navbar-nav {
-    text-align: center; }
+    font-size: 14px; }
+    @media (min-width: 768px) {
+      .navbar .navbar-nav {
+        margin: 9px 0;
+        font-size: 13px; } }
+    @media (min-width: 992px) {
+      .navbar .navbar-nav {
+        margin: 0;
+        font-size: 15px; } }
+    @media (min-width: 768px) {
+      .navbar .navbar-nav > li {
+        margin: 0 2px; } }
+    .navbar .navbar-nav > li > a {
+      padding: 10px 20px;
+      line-height: normal; }
+      @media (min-width: 768px) {
+        .navbar .navbar-nav > li > a {
+          padding: 5px 10px;
+          border-radius: 5px;
+          line-height: 22px; } }
+      @media (min-width: 992px) {
+        .navbar .navbar-nav > li > a {
+          height: 40px;
+          padding: 10px 20px;
+          margin: 2px 0; } }
+    .navbar .navbar-nav > li.separator {
+      padding-top: 8px;
+      border-top: 1px solid #3c424a;
+      margin-top: 8px;
+      box-shadow: 0 -1px #000; }
+      @media (min-width: 768px) {
+        .navbar .navbar-nav > li.separator {
+          padding-left: 4px;
+          padding-top: 0;
+          border-top: none;
+          border-left: 1px solid #3c424a;
+          margin-top: 0;
+          margin-left: 4px;
+          box-shadow: -1px 0 #000; } }
+  .navbar.navbar-inverse {
+    color: #8d8d8d;
+    background: #22262b; }
+    .navbar.navbar-inverse .navbar-nav > li > a {
+      color: #f8f8f8;
+      transition: color 0.2s ease, background-color 0.2s ease; }
+      .navbar.navbar-inverse .navbar-nav > li > a:focus, .navbar.navbar-inverse .navbar-nav > li > a:hover {
+        color: #fff;
+        background-color: #414953; }
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    width: 30px;
-    height: 30px;
+    width: 114px;
+    height: 40px;
     padding: 0;
     margin: 5px 0 5px 20px;
     display: block;
     position: relative; }
+    @media (min-width: 768px) {
+      .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0; } }
+    @media (min-width: 992px) {
+      .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        width: 185px;
+        height: 65px;
+        margin-top: -10px;
+        margin-bottom: -10px; } }
     .navbar > .container .navbar-brand img, .navbar > .container-fluid .navbar-brand img {
       width: 100%;
       height: 100%;
       display: block; }
-    @media (min-width: 768px) {
-      .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-        width: 60px;
-        height: 60px;
-        margin: 0 0 -20px -6px;
-        top: -6px;
-        float: none; } }
   .navbar .navbar-toggle {
-    margin: 4px 15px 4px 0;
+    margin: 7px 15px 7px 0;
     border: none;
-    border-radius: 0; }
+    transition: background-color 0.2s ease; }
+    .navbar .navbar-toggle:focus, .navbar .navbar-toggle:hover {
+      background: #414953; }
     .navbar .navbar-toggle .icon-bar {
-      background: #47b7e3; }
-  .navbar .settings {
-    position: absolute;
-    right: 15px;
-    top: -35px; }
-    @media screen and (min-width: 768px) {
-      .navbar .settings {
-        position: relative;
-        top: auto;
-        right: auto; } }
-    .navbar .settings .dropdown-toggle {
-      color: #b3c3ca;
-      font-size: 13px;
-      line-height: 18px; }
-      .navbar .settings .dropdown-toggle:hover {
-        color: #47b7e3; }
-      .navbar .settings .dropdown-toggle .avatar {
-        width: 30px;
-        height: 30px; }
-        @media screen and (min-width: 768px) {
-          .navbar .settings .dropdown-toggle .avatar {
-            width: 60px;
-            height: 60px;
-            margin: -5px 10px -5px 0; } }
-    .navbar .settings .btn-group.open > .dropdown-toggle {
-      box-shadow: none;
-      background: transparent;
-      color: #47b7e3; }
-    .navbar .settings .caret {
-      margin-left: 6px;
-      border-top: 5px dashed;
-      border-right: 5px solid transparent;
-      border-left: 5px solid transparent; }
-    .navbar .settings .dropdown-menu {
-      min-width: 100%;
-      margin-top: 20px;
-      padding: 0;
-      font-size: 13px;
-      line-height: 18px;
-      background: #fff;
-      border: none;
-      box-shadow: none;
-      left: auto;
-      right: 0; }
-      @media screen and (min-width: 768px) {
-        .navbar .settings .dropdown-menu {
-          left: 0;
-          right: auto; } }
-      .navbar .settings .dropdown-menu:before {
-        width: 0;
-        height: 0;
-        display: block;
-        content: '\0020';
-        overflow: hidden;
-        border-style: solid;
-        border-width: 0 8px 3px 8px;
-        border-color: transparent transparent #fff transparent;
-        position: absolute;
-        right: 20px;
-        top: -3px; }
-      .navbar .settings .dropdown-menu li {
-        border-bottom: 1px solid #efefef; }
-        .navbar .settings .dropdown-menu li a {
-          padding-top: 14px;
-          padding-bottom: 14px;
-          letter-spacing: 0.02em;
-          color: #b3c3ca; }
-          .navbar .settings .dropdown-menu li a .icon {
-            width: 18px;
-            height: 18px;
-            margin-right: 6px;
-            display: inline-block;
-            position: relative;
-            top: -3px; }
-          .navbar .settings .dropdown-menu li a:hover {
-            color: #47b7e3;
-            background: transparent; }
-  .body-interface .navbar .navbar-brand {
-    margin-left: 0; }
-  @media screen and (min-width: 768px) {
-    .body-interface .navbar:before {
-      width: 25%;
-      display: block;
-      content: '\0020';
-      overflow: hidden;
-      background: #313043;
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 0; }
-    .body-interface .navbar > .container-fluid {
-      position: relative;
-      z-index: 2; }
-      .body-interface .navbar > .container-fluid .navbar-header {
-        float: none; }
-        .body-interface .navbar > .container-fluid .navbar-header .navbar-brand {
-          margin: 0 auto; } }
-  @media screen and (min-width: 1200px) {
-    .body-interface .navbar:before {
-      width: 16.66%; } }
-  .body-interface .navbar .space {
-    padding-left: 60px;
-    padding-right: 60px; }
-  .body-interface .navbar .navbar-right {
-    margin-right: 0; }
-  .body-interface .navbar .navbar-left:first-of-type {
-    margin-left: 0; }
-
-.navbar-buttons {
-  padding-bottom: 20px;
-  text-align: center; }
-  .navbar-buttons .link {
-    max-width: 200px;
-    padding: 15px;
-    margin: 5px auto;
-    display: block;
-    vertical-align: middle;
-    color: #5b5a66;
-    transition: color 0.2s ease; }
-    .navbar-buttons .link:hover {
-      color: #fff; }
-    @media (min-width: 768px) {
-      .navbar-buttons .link {
-        max-width: none;
-        margin: 0 10px 0 0;
-        display: inline-block; } }
-  @media (min-width: 768px) {
-    .navbar-buttons {
-      padding-bottom: 0;
-      margin-left: 80px;
-      text-align: left; } }
+      height: 3px;
+      background: #5a7de6; }
 
 /*====================================================================================*/
-/* 05 BUTTONS
+/* 04 BUTTONS
 /*====================================================================================*/
 .btn {
   min-width: 144px;
@@ -326,16 +211,16 @@ h5, .h5 {
     border-radius: 0; }
   .btn.btn-primary {
     color: #fff;
-    background: #47b7e3; }
+    background: #5a7de6; }
     .btn.btn-primary:active, .btn.btn-primary:active:hover, .btn.btn-primary.active, .btn.btn-primary.active:hover {
-      background: #47b7e3;
+      background: #5a7de6;
       box-shadow: 0 2px 6px 0 rgba(71, 183, 227, 0.7); }
   .btn.btn-bordered {
     background: transparent;
     color: #fff;
     border: 1px solid #fff; }
     .btn.btn-bordered:hover {
-      color: #47b7e3;
+      color: #5a7de6;
       background-color: #fff; }
   .btn.btn-gray-bordered {
     background: transparent;
@@ -343,11 +228,11 @@ h5, .h5 {
     .btn.btn-gray-bordered:hover {
       background: #fff; }
   .btn.btn-primary-bordered {
-    color: #47b7e3;
-    border: 1px solid #47b7e3; }
+    color: #5a7de6;
+    border: 1px solid #5a7de6; }
     .btn.btn-primary-bordered:hover {
       color: #fff;
-      background-color: #47b7e3; }
+      background-color: #5a7de6; }
   .btn.btn-blue {
     color: #fff;
     background: #4a669e; }
@@ -376,25 +261,8 @@ h5, .h5 {
     .btn.btn-icon .glyphicon {
       margin-right: 18px; }
 
-.buttons-group {
-  margin-bottom: 15px;
-  text-align: center; }
-  @media screen and (min-width: 768px) {
-    .buttons-group {
-      margin-bottom: 30px; } }
-  .buttons-group .btn {
-    margin: 10px auto; }
-    @media screen and (min-width: 768px) {
-      .buttons-group .btn {
-        margin: 0 20px; } }
-  @media screen and (min-width: 768px) {
-    .buttons-group.buttons-group-right {
-      text-align: right; }
-      .buttons-group.buttons-group-right .btn {
-        margin-right: 0; } }
-
 /*====================================================================================*/
-/* 06 JUMBOTRON
+/* 05 JUMBOTRON
 /*====================================================================================*/
 .jumbotron {
   height: 100%;
@@ -403,7 +271,7 @@ h5, .h5 {
   color: #fff;
   cursor: default;
   text-align: center;
-  background-color: #47b7e3;
+  background-color: #5a7de6;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
