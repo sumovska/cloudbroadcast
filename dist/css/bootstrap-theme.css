@@ -14,19 +14,17 @@
 /* 01 FONTS
 /*====================================================================================*/
 @font-face {
-  font-family: 'Avenir';
-  src: url("../fonts/avenir-medium-webfont.eot");
-  src: url("../fonts/avenir-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-medium-webfont.woff") format("woff"), url("../fonts/avenir-medium-webfont.ttf") format("truetype"), url("../fonts/avenir-medium-webfont.svg#Avenir-Medium") format("svg");
+  font-family: 'Myriad Pro';
+  src: url("../fonts/myriadpro-regular-webfont.eot");
+  src: local("Myriad Pro"), url("../fonts/myriadpro-regular-webfont.woff") format("woff"), url("../fonts/myriadpro-regular-webfont.ttf") format("truetype"), url("../fonts/myriadpro-regular-webfont.svg") format("svg");
   font-weight: normal;
-  font-style: normal;
-  font-stretch: normal; }
+  font-style: normal; }
 @font-face {
-  font-family: 'Avenir';
-  src: url("../fonts/avenir-heavy-webfont.eot");
-  src: url("../fonts/avenir-heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir-heavy-webfont.woff") format("woff"), url("../fonts/avenir-heavy-webfont.ttf") format("truetype"), url("../fonts/avenir-heavy-webfont.svg#Avenir-Heavy") format("svg");
+  font-family: 'Myriad Pro';
+  src: url("../fonts/myriadpro-bold-webfont.eot");
+  src: local("Myriad Pro"), url("../fonts/myriadpro-bold-webfont.woff") format("woff"), url("../fonts/myriadpro-bold-webfont.ttf") format("truetype"), url("../fonts/myriadpro-bold-webfont.svg") format("svg");
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal; }
+  font-style: normal; }
 /*====================================================================================*/
 /* 02 GLOBAL SETTINGS
 /*====================================================================================*/
@@ -130,7 +128,7 @@ h5, .h5 {
       padding: 30px 0;
       border-radius: 0; } }
   .navbar.navbar-inverse {
-    background: #2e2d3c; }
+    background: #22262b; }
     .navbar.navbar-inverse .navbar-nav li a {
       color: #5b5a66;
       transition: color 0.2s ease; }

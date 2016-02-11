@@ -3,16 +3,17 @@
  * File: Main styles
  */
 @import "variables";
-/* ==========================================================================
-   _FOOTER
-   ========================================================================== */
+/*====================================================================================*/
+/* FOOTER
+/*====================================================================================*/
 .footer {
   min-height: 344px;
   padding: 30px 0;
-  color: $color-gray-dark;
-  background-color: $color-dark;
-  text-align: center;
+  color: $color-light;
+  background: $color-dark;
+  font-size: 13px;
   cursor: default;
+
   @media screen and (min-width: $breakpoint-sm) {
     padding: 54px 0 28px;
     text-align: left;
