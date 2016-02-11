@@ -10,7 +10,7 @@
 /*====================================================================================*/
 .footer {
   padding: 20px 0;
-  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+  font-family: "myriad-pro", Helvetica, Arial, sans-serif;
   color: #8d8d8d;
   background: #22262b;
   font-size: 13px;
@@ -23,28 +23,28 @@
     .footer a:hover {
       color: #fff; }
   .footer .heading {
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: normal;
+    margin-bottom: 5px;
+    font-size: inherit;
+    line-height: inherit;
     color: #f8f8f8; }
     @media screen and (min-width: 768px) {
       .footer .heading {
-        margin-bottom: 5px; } }
+        font-size: 16px; } }
   .footer .list {
     padding: 0;
     margin: 0 0 20px;
-    list-style: none;
-    font-size: 14px;
-    line-height: 20px; }
+    list-style: none; }
     .footer .list > li {
       padding: 5px 0; }
     @media screen and (min-width: 768px) {
       .footer .list {
-        margin-bottom: 0; } }
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 20px; } }
   .footer .copyright {
     padding-top: 20px;
     border-top: 1px solid #414953;
-    margin-top: 20px;
+    margin: 20px 0 0;
     text-align: center; }
     @media screen and (min-width: 768px) {
       .footer .copyright {

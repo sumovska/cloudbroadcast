@@ -4,24 +4,7 @@
  */
 @import "variables";
 /*====================================================================================*/
-/* 01 FONTS
-/*====================================================================================*/
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/myriadpro-regular-webfont.eot');
-  src: local('Myriad Pro'), url('../fonts/myriadpro-regular-webfont.woff') format('woff'), url('../fonts/myriadpro-regular-webfont.ttf') format('truetype'), url('../fonts/myriadpro-regular-webfont.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/myriadpro-bold-webfont.eot');
-  src: local('Myriad Pro'), url('../fonts/myriadpro-bold-webfont.woff') format('woff'), url('../fonts/myriadpro-bold-webfont.ttf') format('truetype'), url('../fonts/myriadpro-bold-webfont.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-/*====================================================================================*/
-/* 02 GLOBAL SETTINGS
+/* 01 TEXT STYLES
 /*====================================================================================*/
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -34,9 +17,11 @@ body {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  font: 13px/17px $font-generic;
+  font: 13px $font-generic;
   color: $color-darkest;
   background: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 a {
   color: $color-font;
@@ -48,7 +33,7 @@ a {
 .clearfix { @include clearfix; }
 .h-default {
   margin: 0;
-  font-family: $font-generic;
+  font-family: $font-myriad;
   font-weight: normal;
   font-style: normal;
   line-height: normal;
@@ -61,7 +46,7 @@ h4, .h4 { @extend .h-default; margin-bottom: 20px; font-size: 20px; }
 h5, .h5 { @extend .h-default; margin-bottom: 20px; font-size: 18px; }
 h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 /*====================================================================================*/
-/* 03 NAVBAR
+/* 02 NAVBAR
 /*====================================================================================*/
 .navbar {
   min-height: 50px;
@@ -184,179 +169,117 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
   }
 }
 /*====================================================================================*/
-/* 04 BUTTONS
+/* 03 BUTTONS
 /*====================================================================================*/
 .btn {
-  min-width: 144px;
-  padding: 18px 50px;
-  font-size: 14px;
+  min-width: 120px;
+  padding: 10px 15px;
+  font-family: $font-myriad;
+  font-size: 15px;
+  line-height: 16px;
   font-weight: bold;
-  line-height: 14px;
   text-align: center;
   color: $color-gray-light;
   border: none;
   background: $color-white;
-  border-radius: 100px;
+  border-radius: 5px;
   transition: background-color $duration, color $duration;
 
-  &:focus, &:active, &:active:focus, &.active:focus, &.focus, &:active.focus, &.btn.active.focus {
-    outline: none;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17);
+  @media (min-width: $breakpoint-sm) {
+    padding: 15px 30px;
+    font-size: 17px;
+    line-height: 20px;
   }
-  &:hover, &:focus, &.focus, &:hover {
+
+  &.focus, &.active, &:hover, &:focus, &:hover {
     color: $color-gray-light;
     text-decoration: none;
-  }
-
-  &.btn-default, &.btn-default:active, &.btn-default.active, &.btn-default:hover, &.btn-default:focus, &.btn-default.focus, &.btn-default:hover, .open > &.dropdown-toggle.btn-default {
-    color: $color-gray-light;
-    border-color: transparent;
-    background: $color-white;
-  }
-
-  &.btn-square {
-    border-radius: 0;
+    outline: none;
+    box-shadow: none;
   }
 
   &.btn-primary {
     color: $color-white;
     background: $color-blue;
-    &:active, &.active {
-      &, &:hover {
-        background: $color-blue;
-        box-shadow: 0 2px 6px 0 rgba(71, 183, 227, 0.7);
-      }
+    transition: background-color $duration;
+    &:focus, &:hover {
+      background: $color-blue-more;
     }
   }
-
-  &.btn-bordered {
-    background: transparent;
-    color: $color-white;
-    border: 1px solid $color-white;
-    &:hover {
-      color: $color-blue;
-      background-color: $color-white;
-    }
-  }
-
-  &.btn-gray-bordered {
-    background: transparent;
-    border: 1px solid #e7e7e7;
-    &:hover {
-      background: $color-white;
-    }
-  }
-
-  &.btn-primary-bordered {
-    color: $color-blue;
-    border: 1px solid $color-blue;
-    &:hover {
-      color: $color-white;
-      background-color: $color-blue;
-    }
-  }
-
-  &.btn-blue {
-    color: $color-white;
-    background: #4a669e;
-  }
-
-  &.btn-success {
-    color: $color-white;
-    background: $color-green;
-    &:active, &.active {
-      &, &:hover {
-        background: $color-green;
-        box-shadow: 0 2px 6px 0 rgba(130, 193, 37, 0.70);
-      }
-    }
-  }
-
-  &.btn-danger {
-    color: $color-white;
-    background: $color-red;
-    &:active, &.active {
-      &, &:hover {
-        background: $color-red;
-        box-shadow: 0 2px 6px 0 rgba(230, 72, 58, 0.70);
-      }
-    }
-  }
-
-  &.btn-medium {
-    min-width: 220px;
-  }
-
-  &.btn-sm {
-    padding: 14px 30px;
-  }
-
-  &.btn-xs {
-    padding: 12px 20px;
-  }
-
-  &.btn-icon {
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 15px;
-    .glyphicon {
-      margin-right: 18px;
-    }
-  }
-
 }
 /*====================================================================================*/
-/* 05 JUMBOTRON
+/* 04 JUMBOTRON
 /*====================================================================================*/
 .jumbotron {
-  height: 100%;
-  margin-bottom: 0;
-  padding: 25px 0 15px;
+  padding: 30px 0;
+  margin: 0;
   color: $color-white;
-  cursor: default;
   text-align: center;
-  background-color: $color-blue;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  @media screen and (min-width: $breakpoint-sm) {
-    padding-bottom: 78px;
-    height: 500px;
+  cursor: default;
+  @include gradient-x (#5a28d4, #1a6dc3);
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 45px 0;
   }
 
-  .container {
-    height: 100%;
-    display: table;
-    .row {
-      display: table-cell;
-      vertical-align: middle;
-      @media screen and (min-width: $breakpoint-sm) {
-        vertical-align: bottom;
+  .heading {
+    margin: 0 0 20px;
+    font-size: 26px;
+    line-height: normal;
+    font-weight: bold;
+    color: $color-white;
+    text-rendering: optimizelegibility;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  .text {
+    margin: 15px 0;
+    font-size: 17px;
+
+    @media (min-width: $breakpoint-sm) {
+      margin: 20px 0;
+      font-size: 20px;
+    }
+  }
+
+  .button-create {
+    margin: 15px 0 30px;
+    letter-spacing: -.025em;
+
+    @media (min-width: $breakpoint-sm) {
+      margin: 30px 0;
+      letter-spacing: normal;
+    }
+  }
+
+  .picture {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: -30px;
+
+    @media (min-width: $breakpoint-sm) {
+      margin-bottom: -45px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+
+      @media (min-width: $breakpoint-sm) {
+        max-width: 80%;
       }
-    }
-  }
-
-  h1, .h1 {
-    margin-bottom: 18px;
-    @media screen and (min-width: $breakpoint-sm) {
-      font-size: 35px;
-    }
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: normal;
-    @media screen and (min-width: $breakpoint-sm) {
-      font-size: 16px;
-      line-height: 22px;
-    }
-  }
-
-  .btn {
-    margin-top: 26px;
-    @media screen and (min-width: $breakpoint-sm) {
-      margin-top: 46px;
+      @media (min-width: $breakpoint-lg) {
+        width: 800px;
+        max-width: none;
+        height: 295px;
+      }
     }
   }
 }

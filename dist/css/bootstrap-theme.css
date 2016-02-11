@@ -6,22 +6,7 @@
  * Variables Styles
  */
 /*====================================================================================*/
-/* 01 FONTS
-/*====================================================================================*/
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url("../fonts/myriadpro-regular-webfont.eot");
-  src: local("Myriad Pro"), url("../fonts/myriadpro-regular-webfont.woff") format("woff"), url("../fonts/myriadpro-regular-webfont.ttf") format("truetype"), url("../fonts/myriadpro-regular-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Myriad Pro';
-  src: url("../fonts/myriadpro-bold-webfont.eot");
-  src: local("Myriad Pro"), url("../fonts/myriadpro-bold-webfont.woff") format("woff"), url("../fonts/myriadpro-bold-webfont.ttf") format("truetype"), url("../fonts/myriadpro-bold-webfont.svg") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-/*====================================================================================*/
-/* 02 GLOBAL SETTINGS
+/* 01 TEXT STYLES
 /*====================================================================================*/
 * {
   -webkit-tap-highlight-color: transparent; }
@@ -34,9 +19,11 @@ body {
   min-width: 320px;
   height: 100%;
   min-height: 100%;
-  font: 13px/17px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #22262b;
-  background: #fff; }
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 a {
   color: #8b99a3;
@@ -55,7 +42,7 @@ a {
 
 .h-default, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "myriad-pro", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: normal;
@@ -86,7 +73,7 @@ h6, .h6 {
   font-size: 16px; }
 
 /*====================================================================================*/
-/* 03 NAVBAR
+/* 02 NAVBAR
 /*====================================================================================*/
 .navbar {
   min-height: 50px;
@@ -94,7 +81,7 @@ h6, .h6 {
   border: none;
   border-radius: 0;
   margin-bottom: 0;
-  font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
+  font-family: "myriad-pro", Helvetica, Arial, sans-serif;
   color: #22262b;
   background: #f8f8f8;
   cursor: default; }
@@ -183,128 +170,100 @@ h6, .h6 {
       background: #5a7de6; }
 
 /*====================================================================================*/
-/* 04 BUTTONS
+/* 03 BUTTONS
 /*====================================================================================*/
 .btn {
-  min-width: 144px;
-  padding: 18px 50px;
-  font-size: 14px;
+  min-width: 120px;
+  padding: 10px 15px;
+  font-family: "myriad-pro", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 16px;
   font-weight: bold;
-  line-height: 14px;
   text-align: center;
   color: #a5a5a5;
   border: none;
   background: #fff;
-  border-radius: 100px;
+  border-radius: 5px;
   transition: background-color 0.2s ease, color 0.2s ease; }
-  .btn:focus, .btn:active, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.btn.active.focus {
+  @media (min-width: 768px) {
+    .btn {
+      padding: 15px 30px;
+      font-size: 17px;
+      line-height: 20px; } }
+  .btn.focus, .btn.active, .btn:hover, .btn:focus, .btn:hover {
+    color: #a5a5a5;
+    text-decoration: none;
     outline: none;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.17); }
-  .btn:hover, .btn:focus, .btn.focus, .btn:hover {
-    color: #a5a5a5;
-    text-decoration: none; }
-  .btn.btn-default, .btn.btn-default:active, .btn.btn-default.active, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default.focus, .btn.btn-default:hover, .open > .btn.dropdown-toggle.btn-default {
-    color: #a5a5a5;
-    border-color: transparent;
-    background: #fff; }
-  .btn.btn-square {
-    border-radius: 0; }
+    box-shadow: none; }
   .btn.btn-primary {
     color: #fff;
-    background: #5a7de6; }
-    .btn.btn-primary:active, .btn.btn-primary:active:hover, .btn.btn-primary.active, .btn.btn-primary.active:hover {
-      background: #5a7de6;
-      box-shadow: 0 2px 6px 0 rgba(71, 183, 227, 0.7); }
-  .btn.btn-bordered {
-    background: transparent;
-    color: #fff;
-    border: 1px solid #fff; }
-    .btn.btn-bordered:hover {
-      color: #5a7de6;
-      background-color: #fff; }
-  .btn.btn-gray-bordered {
-    background: transparent;
-    border: 1px solid #e7e7e7; }
-    .btn.btn-gray-bordered:hover {
-      background: #fff; }
-  .btn.btn-primary-bordered {
-    color: #5a7de6;
-    border: 1px solid #5a7de6; }
-    .btn.btn-primary-bordered:hover {
-      color: #fff;
-      background-color: #5a7de6; }
-  .btn.btn-blue {
-    color: #fff;
-    background: #4a669e; }
-  .btn.btn-success {
-    color: #fff;
-    background: #82c125; }
-    .btn.btn-success:active, .btn.btn-success:active:hover, .btn.btn-success.active, .btn.btn-success.active:hover {
-      background: #82c125;
-      box-shadow: 0 2px 6px 0 rgba(130, 193, 37, 0.7); }
-  .btn.btn-danger {
-    color: #fff;
-    background: #e6483a; }
-    .btn.btn-danger:active, .btn.btn-danger:active:hover, .btn.btn-danger.active, .btn.btn-danger.active:hover {
-      background: #e6483a;
-      box-shadow: 0 2px 6px 0 rgba(230, 72, 58, 0.7); }
-  .btn.btn-medium {
-    min-width: 220px; }
-  .btn.btn-sm {
-    padding: 14px 30px; }
-  .btn.btn-xs {
-    padding: 12px 20px; }
-  .btn.btn-icon {
-    text-align: left;
-    padding-left: 15px;
-    padding-right: 15px; }
-    .btn.btn-icon .glyphicon {
-      margin-right: 18px; }
+    background: #5a7de6;
+    transition: background-color 0.2s ease; }
+    .btn.btn-primary:focus, .btn.btn-primary:hover {
+      background: #5f71e9; }
 
 /*====================================================================================*/
-/* 05 JUMBOTRON
+/* 04 JUMBOTRON
 /*====================================================================================*/
 .jumbotron {
-  height: 100%;
-  margin-bottom: 0;
-  padding: 25px 0 15px;
+  padding: 30px 0;
+  margin: 0;
   color: #fff;
-  cursor: default;
   text-align: center;
-  background-color: #5a7de6;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover; }
-  @media screen and (min-width: 768px) {
+  cursor: default;
+  background-color: #5a28d4;
+  background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
+  background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
+  background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
+  background: linear-gradient(to right, #5a28d4, #1a6dc3); }
+  @media (min-width: 768px) {
     .jumbotron {
-      padding-bottom: 78px;
-      height: 500px; } }
-  .jumbotron .container {
-    height: 100%;
-    display: table; }
-    .jumbotron .container .row {
-      display: table-cell;
-      vertical-align: middle; }
-      @media screen and (min-width: 768px) {
-        .jumbotron .container .row {
-          vertical-align: bottom; } }
-  .jumbotron h1, .jumbotron .h1 {
-    margin-bottom: 18px; }
-    @media screen and (min-width: 768px) {
-      .jumbotron h1, .jumbotron .h1 {
-        font-size: 35px; } }
-  .jumbotron p {
-    font-size: 14px;
-    line-height: 19px;
-    font-weight: normal; }
-    @media screen and (min-width: 768px) {
-      .jumbotron p {
-        font-size: 16px;
-        line-height: 22px; } }
-  .jumbotron .btn {
-    margin-top: 26px; }
-    @media screen and (min-width: 768px) {
-      .jumbotron .btn {
-        margin-top: 46px; } }
+      padding: 45px 0; } }
+  .jumbotron .heading {
+    margin: 0 0 20px;
+    font-size: 26px;
+    line-height: normal;
+    font-weight: bold;
+    color: #fff;
+    text-rendering: optimizelegibility; }
+    @media (min-width: 768px) {
+      .jumbotron .heading {
+        font-size: 40px;
+        line-height: 60px; } }
+  .jumbotron .text {
+    margin: 15px 0;
+    font-size: 17px; }
+    @media (min-width: 768px) {
+      .jumbotron .text {
+        margin: 20px 0;
+        font-size: 20px; } }
+  .jumbotron .button-create {
+    margin: 15px 0 30px;
+    letter-spacing: -.025em; }
+    @media (min-width: 768px) {
+      .jumbotron .button-create {
+        margin: 30px 0;
+        letter-spacing: normal; } }
+  .jumbotron .picture {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: -30px; }
+    @media (min-width: 768px) {
+      .jumbotron .picture {
+        margin-bottom: -45px; } }
+    .jumbotron .picture img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      margin: 0 auto;
+      display: block; }
+      @media (min-width: 768px) {
+        .jumbotron .picture img {
+          max-width: 80%; } }
+      @media (min-width: 1200px) {
+        .jumbotron .picture img {
+          width: 800px;
+          max-width: none;
+          height: 295px; } }
 
 /*# sourceMappingURL=bootstrap-theme.css.map */

@@ -24,13 +24,13 @@
   }
 
   .heading {
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: normal;
+    margin-bottom: 5px;
+    font-size: inherit;
+    line-height: inherit;
     color: $color-light;
 
     @media screen and (min-width: $breakpoint-sm) {
-      margin-bottom: 5px;
+      font-size: 16px;
     }
   }
 
@@ -38,19 +38,19 @@
     padding: 0;
     margin: 0 0 20px;
     list-style: none;
-    font-size: 14px;
-    line-height: 20px;
     > li { padding: 5px 0; }
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 0;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 
   .copyright {
     padding-top: 20px;
     border-top: 1px solid $color-dark;
-    margin-top: 20px;
+    margin: 20px 0 0;
     text-align: center;
 
     @media screen and (min-width: $breakpoint-sm) {

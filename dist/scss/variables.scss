@@ -3,7 +3,7 @@
  */
 
 $font-generic: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-myriad: 'Myriad Pro', Helvetica, Arial, sans-serif;
+$font-myriad: 'myriad-pro', Helvetica, Arial, sans-serif;
 
 $color-black: #000;
 $color-darkest: #22262b;
@@ -14,6 +14,7 @@ $color-light: #f8f8f8;
 $color-white: #fff;
 
 $color-blue: #5a7de6;
+$color-blue-more: #5f71e9;
 
 $color-font: #8b99a3;
 $color-header: #fbfbfb;
@@ -42,4 +43,11 @@ $breakpoint-lg: 1200px;
   content: '\0020';
   display: table;
   clear: both;
+}
+@mixin gradient-x($startColor, $endColor) {
+  background-color: $startColor;
+  background: -moz-linear-gradient(-90, $startColor, $endColor);
+  background: -ms-linear-gradient(left, $startColor, $endColor);
+  background: -o-linear-gradient(left, $startColor, $endColor);
+  background: linear-gradient(to right, $startColor, $endColor);
 }
