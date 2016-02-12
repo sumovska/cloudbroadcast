@@ -246,3 +246,58 @@
     }
   }
 }
+/*====================================================================================*/
+/* HOW
+/*====================================================================================*/
+.how {
+  padding: 40px 0 10px;
+  font-size: 15px;
+  line-height: 1.5em;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 55px 0;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  .heading {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .cell {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      width: auto;
+      max-width: none;
+      margin: 0;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      padding: 0 15px;
+    }
+
+    .title {
+      padding: 15px 20px;
+      margin: 0 0 5px;
+      display: block;
+      color: $color-white;
+      font-weight: bold;
+      line-height: 20px;
+      @include gradient-x (#5a28d4, #1a6dc3);
+    }
+
+    .area {
+      padding: 20px;
+      margin: 0;
+      display: block;
+      background: $color-light;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        min-height: 136px;
+      }
+    }
+  }
+}
