@@ -301,3 +301,41 @@
     }
   }
 }
+/*====================================================================================*/
+/* CALL TO ACTION
+/*====================================================================================*/
+.call-to-action {
+  padding: 30px 0;
+  cursor: default;
+  @include gradient-x (#5a28d4, #1a6dc3);
+
+  .heading {
+    margin: 0 0 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: $color-white;
+    text-align: center;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 0;
+      font-size: 14px;
+      line-height: 38px;
+      text-align: left;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      font-size: 18px;
+    }
+  }
+
+  .btn {
+    max-width: 200px;
+    margin: 0 auto 15px;
+    display: block;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 0 0 0 15px;
+      float: right;
+    }
+  }
+}
