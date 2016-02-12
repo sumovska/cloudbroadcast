@@ -119,4 +119,89 @@
   .features p {
     margin: 0; }
 
+/*====================================================================================*/
+/* WHY
+/*====================================================================================*/
+.why {
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+  line-height: 1.25em; }
+  @media screen and (min-width: 768px) {
+    .why {
+      font-size: 16px;
+      line-height: 1.5em; } }
+  .why > .container {
+    padding-top: 35px;
+    padding-bottom: 25px;
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .why > .container {
+        padding-top: 45px; } }
+  .why .col {
+    position: static; }
+  .why .heading {
+    margin-bottom: 20px; }
+    @media screen and (max-width: 768px) {
+      .why .heading {
+        font-size: 20px;
+        text-align: center; } }
+    @media screen and (min-width: 768px) {
+      .why .heading {
+        margin-bottom: 30px; } }
+  .why .entry {
+    max-width: 380px;
+    padding: 15px 0 15px 55px;
+    border-bottom: 1px dashed #ccc;
+    margin: 0 auto;
+    position: relative; }
+    .why .entry:last-child {
+      border: none; }
+    @media screen and (min-width: 768px) {
+      .why .entry {
+        padding: 25px 0 25px 75px; } }
+    .why .entry .icon {
+      width: 35px;
+      height: 35px;
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 5px; }
+      @media screen and (min-width: 768px) {
+        .why .entry .icon {
+          width: 43px;
+          height: 43px;
+          top: 30px;
+          left: 0; } }
+    .why .entry .title {
+      display: inline;
+      font: inherit;
+      font-weight: bold; }
+      .why .entry .title:after {
+        content: ':'; }
+    .why .entry p {
+      margin: 0;
+      display: inline; }
+  .why .picture {
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-bottom: -25px;
+    display: block;
+    overflow: hidden; }
+    @media screen and (min-width: 768px) {
+      .why .picture {
+        margin: 0;
+        position: absolute;
+        bottom: 0; } }
+    .why .picture img {
+      display: block; }
+      @media screen and (max-width: 992px) {
+        .why .picture img {
+          width: 90%;
+          max-width: 350px;
+          height: auto;
+          margin: 0 auto; } }
+      @media screen and (min-width: 992px) {
+        .why .picture img {
+          float: right; } }
+
 /*# sourceMappingURL=main.css.map */
