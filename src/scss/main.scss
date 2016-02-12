@@ -35,10 +35,15 @@
     &:hover { color: $color-white; }
   }
 
+  .nav {
+    &:after { @include clearfix; }
+  }
+
   .heading {
     margin-bottom: 5px;
     font-size: 13px;
     line-height: inherit;
+    font-weight: normal;
     color: $color-light;
 
     @media screen and (min-width: $breakpoint-sm) {
@@ -72,4 +77,62 @@
       text-align: right;
     }
   }
+}
+/*====================================================================================*/
+/* FEATURES
+/*====================================================================================*/
+.features {
+  padding: 30px 0;
+  border-bottom: 1px solid $color-gray-light;
+  font-size: 14px;
+  line-height: 1.25em;
+  text-align: center;
+  color: $color-mid;
+  background: $color-light;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 45px 0;
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  .col {
+    margin: 0 auto 30px;
+    max-width: 350px;
+    &:last-child { margin-bottom: 0; }
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin: 0;
+      max-width: none;
+    }
+  }
+
+  .glyphicon {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 40px;
+    line-height: 40px;
+    color: $color-gray-lighter;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 28px;
+      font-size: 80px;
+      line-height: 80px;
+      &-calendar { font-size: 70px; }
+    }
+  }
+
+  .heading {
+    margin: 0 0 5px;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: bold;
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 10px;
+      font-size: inherit;
+    }
+  }
+
+  p { margin: 0; }
 }

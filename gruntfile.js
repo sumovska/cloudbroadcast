@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 		config: config,
 		clean: {
 			pre: [dist.root, src.css, src.js + 'vendor'],
-			after: [src.fonts + 'FontAwesome.otf', src.js + 'vendor/fastclick.js', src.css + '*.map', src.css + 'variables.*' ]
+			after: [src.js + 'vendor/fastclick.js', src.css + 'variables.*', src.css + '*.map' ]
 		},
 		copy: {
 			dev: {
@@ -56,6 +56,14 @@ module.exports = function (grunt) {
 							src.vendor + 'bootstrap/dist/css/bootstrap.min.css'
 						],
 						dest: src.css
+					},
+					{
+						expand: true,
+						flatten: true,
+						src: [
+							src.vendor + 'bootstrap/dist/fonts/*.*'
+						],
+						dest: src.fonts
 					}
 				]
 			},
@@ -88,12 +96,6 @@ module.exports = function (grunt) {
 							src.js + 'custom.js'
 						],
 						dest: src.js + 'plugins.js'
-					},
-					{
-						src: [
-							src.vendor + 'font-awesome/css/font-awesome.min.css'
-						],
-						dest: src.css + 'plugins.css'
 					}
 				]
 			}

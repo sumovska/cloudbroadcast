@@ -25,7 +25,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 a {
-  color: $color-font;
+  color: $color-gray;
   text-decoration: none;
   transition: color $duration;
   &:hover { color: $color-darkest; text-decoration: none; }
@@ -35,12 +35,11 @@ a {
 .h-default {
   margin: 0;
   font-family: $font-montserrat;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
   line-height: normal;
-  color: $color-blue;
 }
-h1, .h1 { @extend .h-default; margin-bottom: 25px; font-size: 24px; }
+h1, .h1 { @extend .h-default; margin-bottom: 20px; font-size: 32px; }
 h2, .h2 { @extend .h-default; margin-bottom: 20px; font-size: 28px; }
 h3, .h3 { @extend .h-default; margin-bottom: 20px; font-size: 24px; }
 h4, .h4 { @extend .h-default; margin-bottom: 20px; font-size: 20px; }

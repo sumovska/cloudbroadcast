@@ -27,7 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 a {
-  color: #8b99a3;
+  color: #8d8d8d;
   text-decoration: none;
   transition: color 0.2s ease; }
   a:hover {
@@ -44,14 +44,13 @@ a {
 .h-default, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
-  line-height: normal;
-  color: #5a7de6; }
+  line-height: normal; }
 
 h1, .h1 {
-  margin-bottom: 25px;
-  font-size: 24px; }
+  margin-bottom: 20px;
+  font-size: 32px; }
 
 h2, .h2 {
   margin-bottom: 20px;
@@ -183,7 +182,7 @@ h6, .h6 {
   line-height: 16px;
   font-weight: bold;
   text-align: center;
-  color: #a5a5a5;
+  color: #d1d1d1;
   border: none;
   background: #fff;
   border-radius: 5px;
@@ -197,7 +196,7 @@ h6, .h6 {
       font-size: 15px;
       line-height: 20px; } }
   .btn.focus, .btn.active, .btn:hover, .btn:focus, .btn:hover {
-    color: #a5a5a5;
+    color: #d1d1d1;
     text-decoration: none;
     outline: none;
     box-shadow: none; }

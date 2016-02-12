@@ -33,10 +33,15 @@
     color: #8d8d8d; }
     .footer a:hover {
       color: #fff; }
+  .footer .nav:after {
+    content: '\0020';
+    display: table;
+    clear: both; }
   .footer .heading {
     margin-bottom: 5px;
     font-size: 13px;
     line-height: inherit;
+    font-weight: normal;
     color: #f8f8f8; }
     @media screen and (min-width: 768px) {
       .footer .heading {
@@ -63,5 +68,55 @@
         padding-top: 23px;
         margin-top: 34px;
         text-align: right; } }
+
+/*====================================================================================*/
+/* FEATURES
+/*====================================================================================*/
+.features {
+  padding: 30px 0;
+  border-bottom: 1px solid #d1d1d1;
+  font-size: 14px;
+  line-height: 1.25em;
+  text-align: center;
+  color: #555;
+  background: #f8f8f8; }
+  @media screen and (min-width: 768px) {
+    .features {
+      padding: 45px 0;
+      font-size: 16px;
+      line-height: 1.5em; } }
+  .features .col {
+    margin: 0 auto 30px;
+    max-width: 350px; }
+    .features .col:last-child {
+      margin-bottom: 0; }
+    @media screen and (min-width: 768px) {
+      .features .col {
+        margin: 0;
+        max-width: none; } }
+  .features .glyphicon {
+    margin-bottom: 10px;
+    display: block;
+    font-size: 40px;
+    line-height: 40px;
+    color: #ccc; }
+    @media screen and (min-width: 768px) {
+      .features .glyphicon {
+        margin-bottom: 28px;
+        font-size: 80px;
+        line-height: 80px; }
+        .features .glyphicon-calendar {
+          font-size: 70px; } }
+  .features .heading {
+    margin: 0 0 5px;
+    font-size: 15px;
+    line-height: inherit;
+    font-weight: bold; }
+    @media screen and (min-width: 768px) {
+      .features .heading {
+        margin-bottom: 10px;
+        font-size: inherit; } }
+  .features p {
+    margin: 0; }
 
 /*# sourceMappingURL=main.css.map */
