@@ -3,7 +3,7 @@
  */
 
 $font-generic: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-myriad: 'myriad-pro', Helvetica, Arial, sans-serif;
+$font-montserrat: 'Montserrat', sans-serif;
 
 $color-black: #000;
 $color-darkest: #22262b;
@@ -34,6 +34,11 @@ $color-red: #e6483a;
 
 $duration: .2s ease;
 
+$width-sm: 750px;
+$width-md: 970px;
+$width-lg: 1170px;
+
+$breakpoint-xxs: 460px;
 $breakpoint-xs: 568px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 992px;

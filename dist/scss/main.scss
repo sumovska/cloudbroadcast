@@ -8,14 +8,26 @@
 /*====================================================================================*/
 .footer {
   padding: 20px 0;
-  font-family: $font-myriad;
+  font: 12px $font-montserrat;
   color: $color-gray;
   background: $color-darkest;
-  font-size: 13px;
   cursor: default;
+  text-align: center;
 
+  @media screen and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {
+    text-align: left;
+    .col {
+      width: 50%;
+      float: left;
+      &:nth-child(2n-1) { clear: left; }
+    }
+    .wide {
+      clear: both;
+    }
+  }
   @media screen and (min-width: $breakpoint-sm) {
-    padding: 35px 0;
+    padding: 40px 0;
+    text-align: left;
   }
 
   a {
@@ -25,12 +37,13 @@
 
   .heading {
     margin-bottom: 5px;
-    font-size: inherit;
+    font-size: 13px;
     line-height: inherit;
     color: $color-light;
 
     @media screen and (min-width: $breakpoint-sm) {
-      font-size: 16px;
+      margin-bottom: 8px;
+      font-size: 14px;
     }
   }
 
@@ -42,7 +55,6 @@
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 0;
-      font-size: 14px;
       line-height: 20px;
     }
   }
@@ -51,11 +63,12 @@
     padding-top: 20px;
     border-top: 1px solid $color-dark;
     margin: 20px 0 0;
+    font-size: 11px;
     text-align: center;
 
     @media screen and (min-width: $breakpoint-sm) {
-      padding-top: 30px;
-      margin-top: 30px;
+      padding-top: 23px;
+      margin-top: 34px;
       text-align: right;
     }
   }
