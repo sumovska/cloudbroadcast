@@ -153,6 +153,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-newer");
 
-	grunt.registerTask("default", ["clean:pre", "sass", "copy:dev", "concat", "clean:after", "copy:dist", "uglify", "watch"]);
+	grunt.registerTask("default", ["clean:pre", "sass", "copy:dev", "concat", "clean:after", "copy:dist", "watch"]);
 	grunt.registerTask("process", ["newer:sass", "newer:copy:dist"]);
 };
