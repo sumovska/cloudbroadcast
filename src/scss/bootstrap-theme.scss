@@ -54,7 +54,7 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 /* 02 NAVBAR
 /*====================================================================================*/
 .navbar {
-  min-height: 50px;
+  min-height: 70px;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -65,8 +65,8 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
   cursor: default;
 
   @media (min-width: $breakpoint-md) {
-    height: 65px;
-    padding: 10px 0;
+    height: 70px;
+    padding: 13px;
     border-radius: 0;
   }
 

@@ -79,7 +79,7 @@ h6, .h6 {
 /* 02 NAVBAR
 /*====================================================================================*/
 .navbar {
-  min-height: 50px;
+  min-height: 70px;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -90,8 +90,8 @@ h6, .h6 {
   cursor: default; }
   @media (min-width: 992px) {
     .navbar {
-      height: 65px;
-      padding: 10px 0;
+      height: 70px;
+      padding: 13px;
       border-radius: 0; } }
   .navbar .navbar-nav {
     font-size: 13px; }

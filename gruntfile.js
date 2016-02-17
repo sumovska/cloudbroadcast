@@ -112,6 +112,7 @@ module.exports = function (grunt) {
 		},
 		uglify: {
 			dist: {
+				/*
 				files: [{
 					expand: true,
 					cwd: dist.js,
@@ -119,6 +120,7 @@ module.exports = function (grunt) {
 					dest: 'dist/js',
 					ext: ".min.js"
 				}]
+				*/
 			}
 		},
 		watch: {
