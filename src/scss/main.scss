@@ -27,7 +27,6 @@
   }
   @media screen and (min-width: $breakpoint-sm) {
     padding: 40px 0;
-    text-align: left;
   }
 
   a {
@@ -44,7 +43,7 @@
     font-size: 13px;
     line-height: inherit;
     font-weight: normal;
-    color: $color-light;
+    color: $color-lighter;
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 8px;
@@ -87,7 +86,7 @@
   line-height: 1.25em;
   text-align: center;
   color: $color-mid;
-  background: $color-light;
+  background: $color-lighter;
 
   @media screen and (min-width: $breakpoint-sm) {
     padding: 75px 0;
@@ -107,28 +106,26 @@
   }
 
   .glyphicon {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: block;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 80px;
+    line-height: 80px;
     color: $color-gray-lighter;
+
+    &-calendar { font-size: 70px; }
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 28px;
-      font-size: 80px;
-      line-height: 80px;
-      &-calendar { font-size: 70px; }
     }
   }
 
   .heading {
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     font-size: 15px;
     line-height: inherit;
     font-weight: bold;
 
     @media screen and (min-width: $breakpoint-sm) {
-      margin-bottom: 10px;
       font-size: inherit;
     }
   }
@@ -139,8 +136,10 @@
 /* WHY
 /*====================================================================================*/
 .why {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.25em;
+  color: $color-light;
+  text-align: center;
 
   @media screen and (min-width: $breakpoint-sm) {
     font-size: 16px;
@@ -148,12 +147,13 @@
   }
 
   > .container {
-    padding-top: 35px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
 
     @media screen and (min-width: $breakpoint-sm) {
-      padding-top: 45px;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
 
@@ -162,17 +162,21 @@
   }
 
   .heading {
-    margin-bottom: 20px;
+    padding: 0;
+    margin-bottom: 10px;
     line-height: 40px;
 
     @media screen and (max-width: $breakpoint-sm) {
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 26px;
       text-align: center;
     }
     @media screen and (min-width: $breakpoint-sm) {
-      margin-bottom: 30px;
+      margin-bottom: 15px;
     }
   }
+
+  p:last-child { margin: 0; }
 
   .entry {
     max-width: 380px;
@@ -292,13 +296,95 @@
       padding: 20px;
       margin: 0;
       display: block;
-      background: $color-light;
+      background: $color-lighter;
 
       @media screen and (min-width: $breakpoint-sm) {
         min-height: 136px;
       }
     }
   }
+}
+/*====================================================================================*/
+/* PRICING
+/*====================================================================================*/
+.pricing {
+  padding: 35px 0;
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 70px 0;
+  }
+
+  .heading {
+    margin-bottom: 15px;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .title {
+    margin: 0;
+    font-size: 14px;
+    @media screen and (min-width: $breakpoint-sm) {
+      font-size: 18px;
+    }
+  }
+
+  .prices {
+    padding: 50px 0;
+    border-top: 1px dashed $color-gray-lighter;
+    border-bottom: 1px dashed $color-gray-lighter;
+    margin-top: 25px;
+    font-size: 24px;
+    color: $color-mid;
+    &:after { @include clearfix; }
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-top: 35px;
+      font-size: 30px;
+    }
+
+    .entry {
+      margin-bottom: 30px;
+      display: block;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        width: 50%;
+        margin: 0;
+        float: left;
+      }
+
+      .big {
+        font-size: 32px;
+        font-weight: bold;
+
+        @media screen and (min-width: $breakpoint-sm) {
+          font-size: 45px;
+        }
+      }
+    }
+    .star {
+      margin-left: 4px;
+      color: $color-darkest;
+    }
+    .legend {
+      width: 100%;
+      padding-top: 20px;
+      margin: 0;
+      clear: both;
+      font-size: 13px;
+      color: $color-darkest;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        padding-top: 50px;
+        font-size: 15px;
+      }
+    }
+  }
+
 }
 /*====================================================================================*/
 /* CALL TO ACTION
@@ -311,19 +397,20 @@
   .heading {
     margin: 0 0 20px;
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: $color-white;
     text-align: center;
 
     @media screen and (min-width: $breakpoint-sm) {
       margin: 0;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 38px;
       text-align: left;
+      float: left;
     }
     @media screen and (min-width: $breakpoint-md) {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
@@ -331,6 +418,10 @@
     max-width: 200px;
     margin: 0 auto 15px;
     display: block;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      &:last-child { margin-bottom: 0; }
+    }
 
     @media screen and (min-width: $breakpoint-sm) {
       margin: 0 0 0 15px;

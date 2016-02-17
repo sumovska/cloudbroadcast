@@ -27,8 +27,7 @@
         clear: both; } }
   @media screen and (min-width: 768px) {
     .footer {
-      padding: 40px 0;
-      text-align: left; } }
+      padding: 40px 0; } }
   .footer a {
     color: #8d8d8d; }
     .footer a:hover {
@@ -94,26 +93,23 @@
         margin: 0;
         max-width: none; } }
   .features .glyphicon {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     display: block;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 80px;
+    line-height: 80px;
     color: #ccc; }
+    .features .glyphicon-calendar {
+      font-size: 70px; }
     @media screen and (min-width: 768px) {
       .features .glyphicon {
-        margin-bottom: 28px;
-        font-size: 80px;
-        line-height: 80px; }
-        .features .glyphicon-calendar {
-          font-size: 70px; } }
+        margin-bottom: 28px; } }
   .features .heading {
-    margin: 0 0 5px;
+    margin: 0 0 10px;
     font-size: 15px;
     line-height: inherit;
     font-weight: bold; }
     @media screen and (min-width: 768px) {
       .features .heading {
-        margin-bottom: 10px;
         font-size: inherit; } }
   .features p {
     margin: 0; }
@@ -122,31 +118,38 @@
 /* WHY
 /*====================================================================================*/
 .why {
-  font-size: 15px;
-  line-height: 1.25em; }
+  font-size: 14px;
+  line-height: 1.25em;
+  color: #f1f1f1;
+  text-align: center; }
   @media screen and (min-width: 768px) {
     .why {
       font-size: 16px;
       line-height: 1.5em; } }
   .why > .container {
-    padding-top: 35px;
-    padding-bottom: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative; }
     @media screen and (min-width: 768px) {
       .why > .container {
-        padding-top: 45px; } }
+        padding-top: 40px;
+        padding-bottom: 40px; } }
   .why .col {
     position: static; }
   .why .heading {
-    margin-bottom: 20px;
+    padding: 0;
+    margin-bottom: 10px;
     line-height: 40px; }
     @media screen and (max-width: 768px) {
       .why .heading {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 26px;
         text-align: center; } }
     @media screen and (min-width: 768px) {
       .why .heading {
-        margin-bottom: 30px; } }
+        margin-bottom: 15px; } }
+  .why p:last-child {
+    margin: 0; }
   .why .entry {
     max-width: 380px;
     padding: 15px 0 15px 55px;
@@ -252,6 +255,72 @@
           min-height: 136px; } }
 
 /*====================================================================================*/
+/* PRICING
+/*====================================================================================*/
+.pricing {
+  padding: 35px 0;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .pricing {
+      padding: 70px 0; } }
+  .pricing .heading {
+    margin-bottom: 15px; }
+    @media screen and (max-width: 768px) {
+      .pricing .heading {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 26px; } }
+  .pricing .title {
+    margin: 0;
+    font-size: 14px; }
+    @media screen and (min-width: 768px) {
+      .pricing .title {
+        font-size: 18px; } }
+  .pricing .prices {
+    padding: 50px 0;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+    margin-top: 25px;
+    font-size: 24px;
+    color: #555; }
+    .pricing .prices:after {
+      content: '\0020';
+      display: table;
+      clear: both; }
+    @media screen and (min-width: 768px) {
+      .pricing .prices {
+        margin-top: 35px;
+        font-size: 30px; } }
+    .pricing .prices .entry {
+      margin-bottom: 30px;
+      display: block; }
+      @media screen and (min-width: 768px) {
+        .pricing .prices .entry {
+          width: 50%;
+          margin: 0;
+          float: left; } }
+      .pricing .prices .entry .big {
+        font-size: 32px;
+        font-weight: bold; }
+        @media screen and (min-width: 768px) {
+          .pricing .prices .entry .big {
+            font-size: 45px; } }
+    .pricing .prices .star {
+      margin-left: 4px;
+      color: #22262b; }
+    .pricing .prices .legend {
+      width: 100%;
+      padding-top: 20px;
+      margin: 0;
+      clear: both;
+      font-size: 13px;
+      color: #22262b; }
+      @media screen and (min-width: 768px) {
+        .pricing .prices .legend {
+          padding-top: 50px;
+          font-size: 15px; } }
+
+/*====================================================================================*/
 /* CALL TO ACTION
 /*====================================================================================*/
 .call-to-action {
@@ -265,23 +334,27 @@
   .call-to-action .heading {
     margin: 0 0 20px;
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
     text-align: center; }
     @media screen and (min-width: 768px) {
       .call-to-action .heading {
         margin: 0;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 38px;
-        text-align: left; } }
+        text-align: left;
+        float: left; } }
     @media screen and (min-width: 992px) {
       .call-to-action .heading {
-        font-size: 18px; } }
+        font-size: 20px; } }
   .call-to-action .btn {
     max-width: 200px;
     margin: 0 auto 15px;
     display: block; }
+    @media screen and (max-width: 768px) {
+      .call-to-action .btn:last-child {
+        margin-bottom: 0; } }
     @media screen and (min-width: 768px) {
       .call-to-action .btn {
         margin: 0 0 0 15px;
