@@ -80,7 +80,7 @@ h6, .h6 {
 /*====================================================================================*/
 .navbar {
   min-width: 320px;
-  min-height: 50px;
+  min-height: 70px;
   padding: 0;
   border: none;
   border-radius: 0;
@@ -92,14 +92,15 @@ h6, .h6 {
   @media (min-width: 992px) {
     .navbar {
       height: 70px;
-      padding: 13px;
+      padding-top: 13px;
+      padding-bottom: 13px;
       border-radius: 0; } }
   .navbar .navbar-nav {
     font-size: 13px; }
     @media (min-width: 768px) {
       .navbar .navbar-nav {
-        margin: 9px 0;
-        font-size: 12px; } }
+        margin: 19px 0;
+        font-size: 13px; } }
     @media (min-width: 992px) {
       .navbar .navbar-nav {
         margin: 0;
@@ -112,7 +113,7 @@ h6, .h6 {
       line-height: normal; }
       @media (min-width: 768px) {
         .navbar .navbar-nav > li > a {
-          padding: 5px 10px;
+          padding: 7px 12px;
           border-radius: 5px;
           line-height: 20px; } }
       @media (min-width: 992px) {
@@ -143,10 +144,11 @@ h6, .h6 {
         color: #fff;
         background-color: #414953; }
   .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    width: 114px;
-    height: 40px;
+    width: 165px;
+    height: 58px;
     padding: 0;
-    margin: 5px 0 5px 20px;
+    margin-left: 0;
+    margin: 6px 0 0 20px;
     display: block;
     position: relative; }
     @media (min-width: 768px) {
@@ -163,7 +165,7 @@ h6, .h6 {
       height: 100%;
       display: block; }
   .navbar .navbar-toggle {
-    margin: 7px 15px 7px 0;
+    margin: 17px 15px 17px 0;
     border: none;
     transition: background-color 0.2s ease; }
     .navbar .navbar-toggle .icon-bar {
@@ -204,22 +206,17 @@ h6, .h6 {
     box-shadow: none; }
   .btn.btn-lg {
     min-width: 120px;
-    padding: 8px 13px;
-    font-size: 12px;
+    padding: 14px 28px;
+    font-size: 15px;
     line-height: 16px; }
-    @media (min-width: 568px) {
-      .btn.btn-lg {
-        font-size: 13px; } }
     @media (min-width: 768px) {
       .btn.btn-lg {
-        padding: 14px 28px;
-        font-size: 15px;
         line-height: 20px; } }
   .btn.btn-primary {
     color: #fff;
     background: #5a7de6; }
     .btn.btn-primary:focus, .btn.btn-primary:hover {
-      border-color: #5a7de6;
+      border: 2px solid #5a7de6;
       background: #5f71e9; }
   .btn.btn-white {
     border-color: #bacbff;
@@ -233,23 +230,19 @@ h6, .h6 {
 /* 04 JUMBOTRON
 /*====================================================================================*/
 .jumbotron {
-  height: 100%;
-  min-height: 100%;
-  padding: 70px 0 30px;
+  padding: 70px 0;
   margin: 0;
   color: #fff;
   text-align: center;
-  cursor: default;
   background-color: #5a28d4;
-  background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
+  background: -moz-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
   background: linear-gradient(to right, #5a28d4, #1a6dc3); }
   @media (min-width: 768px) {
     .jumbotron {
-      padding: 95px 0 55px; } }
+      padding: 75px 0; } }
   .jumbotron > .container {
-    width: 100%;
     height: 100%;
     max-width: 600px;
     padding: 0;
@@ -275,25 +268,26 @@ h6, .h6 {
           display: none; }
   .jumbotron .heading {
     margin: 0 0 20px;
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 35px;
+    line-height: 50px;
     font-weight: bold;
     color: #fff; }
     @media (min-width: 460px) {
       .jumbotron .heading {
-        font-size: 25px;
-        line-height: 40px; } }
+        font-size: 45px;
+        line-height: 60px; } }
     @media (min-width: 768px) {
       .jumbotron .heading {
         font-size: 45px;
         line-height: 70px; } }
   .jumbotron .text {
     margin: 15px 0;
-    font-size: 15px; }
+    font-size: 20px;
+    line-height: 30px; }
     @media (min-width: 768px) {
       .jumbotron .text {
         margin: 26px 0 20px;
-        font-size: 20px; } }
+        font-size: 22px; } }
   .jumbotron .btn {
     margin: 20px 10px 0; }
     @media (min-width: 768px) {

@@ -9,23 +9,20 @@
 /* FOOTER
 /*====================================================================================*/
 .footer {
-  padding: 20px 0;
+  padding: 50px 0 20px;
   font: 12px "Montserrat", sans-serif;
   color: #8d8d8d;
-  padding-top: 50px;
   background: #22262b;
   cursor: default;
   text-align: center; }
   @media screen and (min-width: 460px) and (max-width: 768px) {
-    .footer {
-    }
-      .footer .col {
-        width: 50%;
-        float: left; }
-        .footer .col:nth-child(2n-1) {
-          clear: left; }
-      .footer .wide {
-        clear: both; } }
+    .footer .col {
+      width: 50%;
+      float: left; }
+      .footer .col:nth-child(2n-1) {
+        clear: left; }
+    .footer .wide {
+      clear: both; } }
   @media screen and (min-width: 768px) {
     .footer {
       padding: 40px 0; } }
@@ -119,18 +116,18 @@
 /* WHY
 /*====================================================================================*/
 .why {
-  background-color: #3a4450;
   font-size: 14px;
   line-height: 1.6em;
   color: #f1f1f1;
-  text-align: center; }
+  text-align: center;
+  background-color: #3a4450; }
   @media screen and (min-width: 768px) {
     .why {
       font-size: 16px;
       line-height: 1.5em; } }
   .why > .container {
     padding-top: 50px;
-    padding-bottom: 50px;}
+    padding-bottom: 50px; }
     @media screen and (min-width: 768px) {
       .why > .container {
         padding-top: 60px;
@@ -218,7 +215,7 @@
       font-weight: bold;
       line-height: 20px;
       background-color: #5a28d4;
-      background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
+      background: -moz-linear-gradient(left, #5a28d4, #1a6dc3);
       background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
       background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
       background: linear-gradient(to right, #5a28d4, #1a6dc3); }
@@ -305,7 +302,7 @@
   padding: 40px 0;
   cursor: default;
   background-color: #5a28d4;
-  background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
+  background: -moz-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
   background: linear-gradient(to right, #5a28d4, #1a6dc3); }

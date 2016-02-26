@@ -39,7 +39,7 @@ $breakpoint-lg: 1200px;
 }
 @mixin gradient-x($startColor, $endColor) {
   background-color: $startColor;
-  background: -moz-linear-gradient(-90, $startColor, $endColor);
+  background: -moz-linear-gradient(left, $startColor, $endColor);
   background: -ms-linear-gradient(left, $startColor, $endColor);
   background: -o-linear-gradient(left, $startColor, $endColor);
   background: linear-gradient(to right, $startColor, $endColor);

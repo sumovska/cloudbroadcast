@@ -235,13 +235,13 @@ h6, .h6 {
   color: #fff;
   text-align: center;
   background-color: #5a28d4;
-  background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
+  background: -moz-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
   background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
   background: linear-gradient(to right, #5a28d4, #1a6dc3); }
   @media (min-width: 768px) {
     .jumbotron {
-      padding: 75px 0px; } }
+      padding: 75px 0; } }
   .jumbotron > .container {
     height: 100%;
     max-width: 600px;
@@ -282,8 +282,8 @@ h6, .h6 {
         line-height: 70px; } }
   .jumbotron .text {
     margin: 15px 0;
-    line-height: 30px;
-    font-size: 20px; }
+    font-size: 20px;
+    line-height: 30px; }
     @media (min-width: 768px) {
       .jumbotron .text {
         margin: 26px 0 20px;

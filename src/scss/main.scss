@@ -7,7 +7,7 @@
 /* FOOTER
 /*====================================================================================*/
 .footer {
-  padding: 20px 0;
+  padding: 50px 0 20px;
   font: 12px $font-montserrat;
   color: $color-gray;
   background: $color-darkest;
@@ -15,7 +15,6 @@
   text-align: center;
 
   @media screen and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {
-    text-align: left;
     .col {
       width: 50%;
       float: left;
@@ -81,7 +80,7 @@
 /* FEATURES
 /*====================================================================================*/
 .features {
-  padding: 30px 0;
+  padding: 45px 0;
   font-size: 14px;
   line-height: 1.25em;
   text-align: center;
@@ -137,9 +136,10 @@
 /*====================================================================================*/
 .why {
   font-size: 14px;
-  line-height: 1.25em;
+  line-height: 1.6em;
   color: $color-light;
   text-align: center;
+  background-color: #3a4450;
 
   @media screen and (min-width: $breakpoint-sm) {
     font-size: 16px;
@@ -147,18 +147,13 @@
   }
 
   > .container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     @media screen and (min-width: $breakpoint-sm) {
-      padding-top: 40px;
-      padding-bottom: 40px;
+      padding-top: 60px;
+      padding-bottom: 60px;
     }
-  }
-
-  .col {
-    position: static;
   }
 
   .heading {
@@ -167,7 +162,7 @@
     line-height: 40px;
 
     @media screen and (max-width: $breakpoint-sm) {
-      font-size: 18px;
+      font-size: 20px;
       line-height: 26px;
       text-align: center;
     }
@@ -218,34 +213,6 @@
     p {
       margin: 0;
       display: inline;
-    }
-  }
-
-  .picture {
-    padding: 0 20px;
-    margin-top: 30px;
-    margin-bottom: -25px;
-    display: block;
-    overflow: hidden;
-
-    @media screen and (min-width: $breakpoint-sm) {
-      margin: 0;
-      position: absolute;
-      bottom: 0;
-    }
-
-    img {
-      display: block;
-
-      @media screen and (max-width: $breakpoint-md) {
-        width: 90%;
-        max-width: 350px;
-        height: auto;
-        margin: 0 auto;
-      }
-      @media screen and (min-width: $breakpoint-md) {
-        float: right;
-      }
     }
   }
 }
@@ -309,6 +276,7 @@
 /*====================================================================================*/
 .pricing {
   padding: 35px 0;
+  font-size: 18px;
   text-align: center;
 
   @media screen and (min-width: $breakpoint-sm) {
@@ -320,7 +288,7 @@
 
     @media screen and (max-width: $breakpoint-sm) {
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 26px;
     }
   }
@@ -390,7 +358,7 @@
 /* CALL TO ACTION
 /*====================================================================================*/
 .call-to-action {
-  padding: 30px 0;
+  padding: 40px 0;
   cursor: default;
   @include gradient-x (#5a28d4, #1a6dc3);
 
