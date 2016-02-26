@@ -256,7 +256,7 @@
       color: $color-white;
       font-weight: bold;
       line-height: 20px;
-      @include gradient-x (#5a28d4, #1a6dc3);
+      @include gradient-x(#5a28d4, #1a6dc3);
     }
 
     .area {
@@ -360,7 +360,7 @@
 .call-to-action {
   padding: 40px 0;
   cursor: default;
-  @include gradient-x (#5a28d4, #1a6dc3);
+  @include gradient-x(#5a28d4, #1a6dc3);
 
   .heading {
     margin: 0 0 20px;
@@ -394,6 +394,52 @@
     @media screen and (min-width: $breakpoint-sm) {
       margin: 0 0 0 15px;
       float: right;
+    }
+  }
+}
+/*====================================================================================*/
+/* POLICY
+/*====================================================================================*/
+.policy {
+  font-size: 14px;
+  line-height: 25px;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    font-size: 16px;
+
+    .text { line-height: 35px; }
+  }
+
+  .list {
+    margin-bottom: 20px;
+
+    &:first-of-type {
+      margin-top: 10px;
+      padding-top: 20px;
+      border-top: 1px dashed $color-gray-lighter;
+    }
+
+    &:last-of-type { margin-bottom: 0; }
+
+    .title {
+      font-size: 21px;
+      font-weight: 500;
+
+      span { border-bottom: 1px solid $color-darkest; }
+    }
+
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-bottom: 50px;
+
+      &:first-of-type { margin-top: 20px; padding-top: 30px; }
+
+      .title { margin-bottom: 34px; }
+
+      ul {
+        margin-top: 30px;
+
+        li { margin-bottom: 10px; }
+      }
     }
   }
 }

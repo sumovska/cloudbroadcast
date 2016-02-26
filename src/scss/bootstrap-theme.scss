@@ -25,12 +25,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 a {
-  color: $color-gray;
+  color: $color-sky;
   text-decoration: none;
   transition: color $duration;
-  &:hover { color: $color-darkest; text-decoration: none; }
-  &:active, &.active, &:hover, &:focus { text-decoration: none; }
+  &:hover { color: $color-sky-dark; text-decoration: underline; }
+  &:active, &.active, &:hover, &:focus { text-decoration: underline; }
 }
+ol, ul { padding-left: 25px; }
 .clearfix { @include clearfix; }
 .h-default {
   margin: 0;
@@ -242,7 +243,7 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
   margin: 0;
   color: $color-white;
   text-align: center;
-  @include gradient-x (#5a28d4, #1a6dc3);
+  @include gradient-x(#5a28d4, #1a6dc3);
 
   @media (min-width: $breakpoint-sm) {
     padding: 75px 0;
@@ -338,5 +339,44 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
         height: 295px;
       }
     }
+  }
+}
+/*====================================================================================*/
+/* 04 PAGE-HEADER
+/*====================================================================================*/
+.page-header {
+  margin: 0 0 25px;
+  padding: 40px 0;
+  color: $color-white;
+  @include gradient-x(#5a28d4, #1a6dc3);
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    margin: 0 0 35px;
+    text-align: left;
+
+    .container {
+      min-height: 52px;
+      position: relative;
+    }
+
+    .heading {
+      margin: 0;
+    }
+
+    .btn-campaign {
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+  }
+}
+/*====================================================================================*/
+/* 04 PANEL
+/*====================================================================================*/
+.panel-body {
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 40px 70px;
   }
 }

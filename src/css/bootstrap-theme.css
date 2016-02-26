@@ -27,14 +27,17 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 a {
-  color: #8d8d8d;
+  color: #08c;
   text-decoration: none;
   transition: color 0.2s ease; }
   a:hover {
-    color: #22262b;
-    text-decoration: none; }
+    color: #005580;
+    text-decoration: underline; }
   a:active, a.active, a:hover, a:focus {
-    text-decoration: none; }
+    text-decoration: underline; }
+
+ol, ul {
+  padding-left: 25px; }
 
 .clearfix {
   content: '\0020';
@@ -314,5 +317,39 @@ h6, .h6 {
           width: 800px;
           max-width: none;
           height: 295px; } }
+
+/*====================================================================================*/
+/* 04 PAGE-HEADER
+/*====================================================================================*/
+.page-header {
+  margin: 0 0 25px;
+  padding: 40px 0;
+  color: #fff;
+  background-color: #5a28d4;
+  background: -moz-linear-gradient(left, #5a28d4, #1a6dc3);
+  background: -ms-linear-gradient(left, #5a28d4, #1a6dc3);
+  background: -o-linear-gradient(left, #5a28d4, #1a6dc3);
+  background: linear-gradient(to right, #5a28d4, #1a6dc3);
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .page-header {
+      margin: 0 0 35px;
+      text-align: left; }
+      .page-header .container {
+        min-height: 52px;
+        position: relative; }
+      .page-header .heading {
+        margin: 0; }
+      .page-header .btn-campaign {
+        position: absolute;
+        right: 15px;
+        top: 0; } }
+
+/*====================================================================================*/
+/* 04 PANEL
+/*====================================================================================*/
+@media screen and (min-width: 768px) {
+  .panel-body {
+    padding: 40px 70px; } }
 
 /*# sourceMappingURL=bootstrap-theme.css.map */
