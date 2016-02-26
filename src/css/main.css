@@ -12,12 +12,13 @@
   padding: 20px 0;
   font: 12px "Montserrat", sans-serif;
   color: #8d8d8d;
+  padding-top: 50px;
   background: #22262b;
   cursor: default;
   text-align: center; }
   @media screen and (min-width: 460px) and (max-width: 768px) {
     .footer {
-      text-align: left; }
+    }
       .footer .col {
         width: 50%;
         float: left; }
@@ -72,7 +73,7 @@
 /* FEATURES
 /*====================================================================================*/
 .features {
-  padding: 30px 0;
+  padding: 45px 0;
   font-size: 14px;
   line-height: 1.25em;
   text-align: center;
@@ -118,8 +119,9 @@
 /* WHY
 /*====================================================================================*/
 .why {
+  background-color: #3a4450;
   font-size: 14px;
-  line-height: 1.25em;
+  line-height: 1.6em;
   color: #f1f1f1;
   text-align: center; }
   @media screen and (min-width: 768px) {
@@ -127,22 +129,19 @@
       font-size: 16px;
       line-height: 1.5em; } }
   .why > .container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    position: relative; }
+    padding-top: 50px;
+    padding-bottom: 50px;}
     @media screen and (min-width: 768px) {
       .why > .container {
-        padding-top: 40px;
-        padding-bottom: 40px; } }
-  .why .col {
-    position: static; }
+        padding-top: 60px;
+        padding-bottom: 60px; } }
   .why .heading {
     padding: 0;
     margin-bottom: 10px;
     line-height: 40px; }
     @media screen and (max-width: 768px) {
       .why .heading {
-        font-size: 18px;
+        font-size: 20px;
         line-height: 26px;
         text-align: center; } }
     @media screen and (min-width: 768px) {
@@ -183,28 +182,6 @@
     .why .entry p {
       margin: 0;
       display: inline; }
-  .why .picture {
-    padding: 0 20px;
-    margin-top: 30px;
-    margin-bottom: -25px;
-    display: block;
-    overflow: hidden; }
-    @media screen and (min-width: 768px) {
-      .why .picture {
-        margin: 0;
-        position: absolute;
-        bottom: 0; } }
-    .why .picture img {
-      display: block; }
-      @media screen and (max-width: 992px) {
-        .why .picture img {
-          width: 90%;
-          max-width: 350px;
-          height: auto;
-          margin: 0 auto; } }
-      @media screen and (min-width: 992px) {
-        .why .picture img {
-          float: right; } }
 
 /*====================================================================================*/
 /* HOW
@@ -259,6 +236,7 @@
 /*====================================================================================*/
 .pricing {
   padding: 35px 0;
+  font-size: 18px;
   text-align: center; }
   @media screen and (min-width: 768px) {
     .pricing {
@@ -268,7 +246,7 @@
     @media screen and (max-width: 768px) {
       .pricing .heading {
         margin-bottom: 10px;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 26px; } }
   .pricing .title {
     margin: 0;
@@ -324,7 +302,7 @@
 /* CALL TO ACTION
 /*====================================================================================*/
 .call-to-action {
-  padding: 30px 0;
+  padding: 40px 0;
   cursor: default;
   background-color: #5a28d4;
   background: -moz-linear-gradient(-90, #5a28d4, #1a6dc3);
