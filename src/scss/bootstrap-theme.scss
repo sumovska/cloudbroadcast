@@ -18,7 +18,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  font: 12px $font-generic;
+  font: 14px $font-generic;
   color: $color-darkest;
   background: $color-white;
   -webkit-font-smoothing: antialiased;
@@ -342,7 +342,7 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
   }
 }
 /*====================================================================================*/
-/* 04 PAGE-HEADER
+/* 05 PAGE-HEADER
 /*====================================================================================*/
 .page-header {
   margin: 0 0 25px;
@@ -372,11 +372,19 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
   }
 }
 /*====================================================================================*/
-/* 04 PANEL
+/* 06 PANEL
 /*====================================================================================*/
 .panel-body {
 
   @media screen and (min-width: $breakpoint-sm) {
-    padding: 40px 70px;
+    padding: 50px 70px;
+  }
+
+  .panel-body-heading {
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 24px;
+    }
   }
 }

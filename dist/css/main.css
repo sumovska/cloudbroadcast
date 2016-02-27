@@ -336,40 +336,115 @@
         float: right; } }
 
 /*====================================================================================*/
+/* TEXT-BORDERED
+/*====================================================================================*/
+.text-bordered {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px dashed #ccc; }
+  @media screen and (min-width: 768px) {
+    .text-bordered {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      font-size: 16px;
+      line-height: 35px; } }
+  @media screen and (min-width: 992px) {
+    .text-bordered {
+      padding-left: 100px;
+      padding-right: 100px; } }
+
+/*====================================================================================*/
 /* POLICY
 /*====================================================================================*/
-.policy {
-  font-size: 14px;
-  line-height: 25px; }
+@media screen and (min-width: 768px) {
+  .policy {
+    font-size: 16px;
+    line-height: 1.563em; } }
+.policy .list {
+  margin-bottom: 20px; }
+  .policy .list:last-of-type {
+    margin-bottom: 0; }
+  .policy .list .title {
+    font-size: 21px;
+    font-weight: 500; }
+    .policy .list .title span {
+      border-bottom: 1px solid #22262b; }
   @media screen and (min-width: 768px) {
-    .policy {
-      font-size: 16px; }
-      .policy .text {
-        line-height: 35px; } }
-  .policy .list {
-    margin-bottom: 20px; }
-    .policy .list:first-of-type {
-      margin-top: 10px;
-      padding-top: 20px;
-      border-top: 1px dashed #ccc; }
-    .policy .list:last-of-type {
-      margin-bottom: 0; }
-    .policy .list .title {
-      font-size: 21px;
-      font-weight: 500; }
-      .policy .list .title span {
-        border-bottom: 1px solid #22262b; }
-    @media screen and (min-width: 768px) {
-      .policy .list {
-        margin-bottom: 50px; }
-        .policy .list:first-of-type {
-          margin-top: 20px;
-          padding-top: 30px; }
-        .policy .list .title {
-          margin-bottom: 34px; }
-        .policy .list ul {
-          margin-top: 30px; }
-          .policy .list ul li {
-            margin-bottom: 10px; } }
+    .policy .list {
+      margin-bottom: 50px; }
+      .policy .list .title {
+        margin-bottom: 34px; }
+      .policy .list ul {
+        margin-top: 30px; }
+        .policy .list ul li {
+          margin-bottom: 10px; } }
+
+/*====================================================================================*/
+/* CONTACT-US
+/*====================================================================================*/
+.contact-us .form {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc; }
+  .contact-us .form .form-group {
+    margin-bottom: 10px; }
+  @media screen and (min-width: 768px) {
+    .contact-us .form {
+      margin-bottom: 20px;
+      padding-bottom: 50px; } }
+.contact-us .info {
+  text-align: center;
+  line-height: 24px; }
+  @media screen and (min-width: 768px) {
+    .contact-us .info {
+      text-align: left;
+      line-height: 2.188em; }
+      .contact-us .info p {
+        margin: 0; } }
+
+/*====================================================================================*/
+/* INTRODUCTION
+/*====================================================================================*/
+.introduction {
+  margin-bottom: 20px; }
+  .introduction .entry {
+    padding: 20px 0;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc; }
+    .introduction .entry:first-of-type {
+      padding-top: 0;
+      border-top: none; }
+  @media screen and (max-width: 768px) {
+    .introduction .heading {
+      font-size: 20px; } }
+  @media screen and (min-width: 768px) {
+    .introduction {
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 2.188em; }
+      .introduction .entry {
+        padding: 30px 0; }
+        .introduction .entry.entry-right .col {
+          float: right; } }
+
+/*====================================================================================*/
+/* FEATURES-LIST
+/*====================================================================================*/
+@media screen and (min-width: 768px) {
+  .features-list {
+    font-size: 16px;
+    line-height: 2.188em; } }
+.features-list .heading {
+  margin-bottom: 40px; }
+  @media screen and (max-width: 768px) {
+    .features-list .heading {
+      font-size: 20px; } }
+.features-list .row .col {
+  margin-bottom: 40px; }
+.features-list .row:last-of-type .col {
+  margin-bottom: 0; }
+.features-list .img {
+  margin-bottom: 16px; }
 
 /*# sourceMappingURL=main.css.map */

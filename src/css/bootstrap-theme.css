@@ -20,7 +20,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #22262b;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -319,7 +319,7 @@ h6, .h6 {
           height: 295px; } }
 
 /*====================================================================================*/
-/* 04 PAGE-HEADER
+/* 05 PAGE-HEADER
 /*====================================================================================*/
 .page-header {
   margin: 0 0 25px;
@@ -346,10 +346,15 @@ h6, .h6 {
         top: 0; } }
 
 /*====================================================================================*/
-/* 04 PANEL
+/* 06 PANEL
 /*====================================================================================*/
 @media screen and (min-width: 768px) {
   .panel-body {
-    padding: 40px 70px; } }
+    padding: 50px 70px; } }
+.panel-body .panel-body-heading {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .panel-body .panel-body-heading {
+      font-size: 24px; } }
 
 /*# sourceMappingURL=bootstrap-theme.css.map */
