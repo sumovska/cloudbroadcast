@@ -51,6 +51,7 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
     width: $width-md;
   }
 }
+textarea { resize: none; }
 /*====================================================================================*/
 /* 02 NAVBAR
 /*====================================================================================*/
@@ -237,10 +238,10 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 
   &.btn-danger {
     color: $color-white;
-    background: #D82214;
-    @include gradient-y(#EF5346, #D82214);
+    background: #d82214;
+    @include gradient-y(#ef5346, #d82214);
     border-color: #ff5d4e;
-    &:focus, &:hover { border-color: #D82214; @include gradient-y(#EF5346, #D82214);}
+    &:focus, &:hover { border-color: #d82214; @include gradient-y(#ef5346, #d82214); }
   }
 }
 /*====================================================================================*/

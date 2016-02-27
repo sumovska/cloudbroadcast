@@ -66,24 +66,24 @@
 
 					<!-- Contact-us -->
 					<section class="contact-us">
-						<form class="form">
+						<form class="form" action="#" method="post" novalidate>
 							<div class="row">
-								<div class="col col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+								<div class="col col-sm-8 col-sm-offset-2">
 									<div class="form-group">
-										<label for="name">Name</label>
-										<input type="text" class="form-control input-lg" id="name" value="">
+										<label class="control-label" for="name">Name</label>
+										<input class="form-control input-lg" type="text" id="name" required value="">
 									</div>
 									<div class="form-group">
-										<label for="email">Email Address <sup>*</sup></label>
-										<input type="email" class="form-control input-lg" id="email" value="">
+										<label class="control-label" for="email">Email Address</label>
+										<input class="form-control input-lg" type="email" id="email" required value="">
 									</div>
 									<div class="form-group">
-										<label for="subject">Subject</label>
-										<input type="text" class="form-control input-lg" id="subject" value="">
+										<label class="control-label" for="subject">Subject</label>
+										<input class="form-control input-lg" type="text" id="subject" required value="">
 									</div>
 									<div class="form-group">
-										<label for="message">Message</label>
-										<textarea class="form-control" id="message" rows="10"></textarea>
+										<label class="control-label" for="message">Message</label>
+										<textarea class="form-control input-lg" id="message" rows="10" required></textarea>
 									</div>
 									<button type="submit" class="btn btn-primary pull-right">Submit</button>
 								</div>
@@ -122,7 +122,7 @@
 					<section class="col col-sm-3">
 						<h4 class="heading">Solutions</h4>
 						<ul class="list">
-							<li><a href="voice-broadcasting.html">Voice Broadcasting</a></li>
+							<li><a href="#">Voice Broadcasting</a></li>
 							<li><a href="appointment-reminders.html">Appointment Reminders</a></li>
 						</ul>
 					</section>

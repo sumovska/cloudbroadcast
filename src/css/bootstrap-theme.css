@@ -78,6 +78,9 @@ h6, .h6 {
 @media (min-width: 1200px) {
   .container {
     width: 970px; } }
+textarea {
+  resize: none; }
+
 /*====================================================================================*/
 /* 02 NAVBAR
 /*====================================================================================*/
@@ -230,20 +233,20 @@ h6, .h6 {
       background: transparent; }
   .btn.btn-danger {
     color: #fff;
-    background: #D82214;
-    background-color: #EF5346;
-    background: -moz-linear-gradient(top, #EF5346, #D82214);
-    background: -ms-linear-gradient(top, #EF5346, #D82214);
-    background: -o-linear-gradient(top, #EF5346, #D82214);
-    background: linear-gradient(to bottom, #EF5346, #D82214);
+    background: #d82214;
+    background-color: #ef5346;
+    background: -moz-linear-gradient(top, #ef5346, #d82214);
+    background: -ms-linear-gradient(top, #ef5346, #d82214);
+    background: -o-linear-gradient(top, #ef5346, #d82214);
+    background: linear-gradient(to bottom, #ef5346, #d82214);
     border-color: #ff5d4e; }
     .btn.btn-danger:focus, .btn.btn-danger:hover {
-      border-color: #D82214;
-      background-color: #EF5346;
-      background: -moz-linear-gradient(top, #EF5346, #D82214);
-      background: -ms-linear-gradient(top, #EF5346, #D82214);
-      background: -o-linear-gradient(top, #EF5346, #D82214);
-      background: linear-gradient(to bottom, #EF5346, #D82214); }
+      border-color: #d82214;
+      background-color: #ef5346;
+      background: -moz-linear-gradient(top, #ef5346, #d82214);
+      background: -ms-linear-gradient(top, #ef5346, #d82214);
+      background: -o-linear-gradient(top, #ef5346, #d82214);
+      background: linear-gradient(to bottom, #ef5346, #d82214); }
 
 /*====================================================================================*/
 /* 04 JUMBOTRON

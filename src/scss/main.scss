@@ -425,12 +425,12 @@
 
   .entry {
     margin-bottom: 20px;
-
     &:last-of-type { margin-bottom: 0; }
 
     .title {
       font-size: 21px;
       font-weight: 500;
+      text-align: center;
 
       span { border-bottom: 1px solid $color-darkest; }
     }
@@ -438,11 +438,13 @@
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 50px;
 
-      .title { margin-bottom: 34px; }
+      .title {
+        margin-bottom: 34px;
+        text-align: left;
+      }
 
       ul {
         margin-top: 30px;
-
         li { margin-bottom: 10px; }
       }
     }
@@ -460,7 +462,7 @@
     padding-bottom: 20px;
     border-bottom: 1px dashed $color-gray-lighter;
 
-    .form-group { margin-bottom: 6px; }
+    .form-group { margin-bottom: 10px; }
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 20px;
@@ -533,6 +535,13 @@
     }
   }
 
+  .h4 {
+    text-align: center;
+    @media screen and (max-width: $breakpoint-sm) {
+      text-align: left
+    }
+  }
+
   .row {
     .col {
       margin-bottom: 40px;
@@ -599,5 +608,10 @@
     width: 100%;
     text-transform: uppercase;
     text-shadow: rgb(205, 46, 13) 2px 2px 0;
+  }
+}
+.form {
+  .alert {
+    display: block;
   }
 }
