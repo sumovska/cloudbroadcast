@@ -20,7 +20,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #22262b;
   background: #fff;
   -webkit-font-smoothing: antialiased;
@@ -228,6 +228,22 @@ h6, .h6 {
     .btn.btn-white:focus, .btn.btn-white:hover {
       border-color: #5a7de6;
       background: transparent; }
+  .btn.btn-danger {
+    color: #fff;
+    background: #D82214;
+    background-color: #EF5346;
+    background: -moz-linear-gradient(top, #EF5346, #D82214);
+    background: -ms-linear-gradient(top, #EF5346, #D82214);
+    background: -o-linear-gradient(top, #EF5346, #D82214);
+    background: linear-gradient(to bottom, #EF5346, #D82214);
+    border-color: #ff5d4e; }
+    .btn.btn-danger:focus, .btn.btn-danger:hover {
+      border-color: #D82214;
+      background-color: #EF5346;
+      background: -moz-linear-gradient(top, #EF5346, #D82214);
+      background: -ms-linear-gradient(top, #EF5346, #D82214);
+      background: -o-linear-gradient(top, #EF5346, #D82214);
+      background: linear-gradient(to bottom, #EF5346, #D82214); }
 
 /*====================================================================================*/
 /* 04 JUMBOTRON
@@ -322,7 +338,7 @@ h6, .h6 {
 /* 05 PAGE-HEADER
 /*====================================================================================*/
 .page-header {
-  margin: 0 0 25px;
+  margin: 0;
   padding: 40px 0;
   color: #fff;
   background-color: #5a28d4;
@@ -333,7 +349,6 @@ h6, .h6 {
   text-align: center; }
   @media screen and (min-width: 768px) {
     .page-header {
-      margin: 0 0 35px;
       text-align: left; }
       .page-header .container {
         min-height: 52px;
@@ -348,13 +363,57 @@ h6, .h6 {
 /*====================================================================================*/
 /* 06 PANEL
 /*====================================================================================*/
-@media screen and (min-width: 768px) {
-  .panel-body {
-    padding: 50px 70px; } }
-.panel-body .panel-body-heading {
-  text-align: center; }
-  @media screen and (max-width: 768px) {
-    .panel-body .panel-body-heading {
-      font-size: 24px; } }
+.panel {
+  margin: 0;
+  border-color: #ccc; }
+  @media screen and (min-width: 768px) {
+    .panel .panel-body {
+      padding: 50px 70px; } }
+  .panel .panel-body .panel-body-heading {
+    text-align: center; }
+    @media screen and (max-width: 768px) {
+      .panel .panel-body .panel-body-heading {
+        font-size: 24px; } }
+  .panel .panel-body .text-bordered {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6em;
+    border-bottom: 1px dashed #ccc; }
+    @media screen and (min-width: 768px) {
+      .panel .panel-body .text-bordered {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        font-size: 16px;
+        line-height: 35px; } }
+    @media screen and (min-width: 992px) {
+      .panel .panel-body .text-bordered {
+        padding-left: 100px;
+        padding-right: 100px; } }
+
+.panel-custom {
+  border-color: #ccc;
+  border-radius: 0; }
+  .panel-custom .panel-heading {
+    padding: 0;
+    border: none;
+    background: transparent; }
+    .panel-custom .panel-heading img {
+      width: 100%; }
+  @media screen and (min-width: 768px) {
+    .panel-custom .panel-body {
+      padding: 40px; } }
+  .panel-custom .panel-body .panel-body-heading {
+    margin-bottom: 6px;
+    text-align: left; }
+  .panel-custom .panel-body .text-bordered {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left; }
+    @media screen and (min-width: 768px) {
+      .panel-custom .panel-body .text-bordered {
+        margin-bottom: 20px;
+        padding-bottom: 20px; } }
 
 /*# sourceMappingURL=bootstrap-theme.css.map */

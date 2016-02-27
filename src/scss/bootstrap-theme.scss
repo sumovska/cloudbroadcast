@@ -18,7 +18,7 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100%;
-  font: 14px $font-generic;
+  font: 12px $font-generic;
   color: $color-darkest;
   background: $color-white;
   -webkit-font-smoothing: antialiased;
@@ -234,6 +234,14 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
     background: transparent;
     &:focus, &:hover { border-color: $color-blue; background: transparent; }
   }
+
+  &.btn-danger {
+    color: $color-white;
+    background: #D82214;
+    @include gradient-y(#EF5346, #D82214);
+    border-color: #ff5d4e;
+    &:focus, &:hover { border-color: #D82214; @include gradient-y(#EF5346, #D82214);}
+  }
 }
 /*====================================================================================*/
 /* 04 JUMBOTRON
@@ -345,14 +353,13 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 /* 05 PAGE-HEADER
 /*====================================================================================*/
 .page-header {
-  margin: 0 0 25px;
+  margin: 0;
   padding: 40px 0;
   color: $color-white;
   @include gradient-x(#5a28d4, #1a6dc3);
   text-align: center;
 
   @media screen and (min-width: $breakpoint-sm) {
-    margin: 0 0 35px;
     text-align: left;
 
     .container {
@@ -374,17 +381,75 @@ h6, .h6 { @extend .h-default; margin-bottom: 20px; font-size: 16px; }
 /*====================================================================================*/
 /* 06 PANEL
 /*====================================================================================*/
-.panel-body {
+.panel {
+  margin: 0;
+  border-color: $color-gray-lighter;
 
-  @media screen and (min-width: $breakpoint-sm) {
-    padding: 50px 70px;
+  .panel-body {
+
+    @media screen and (min-width: $breakpoint-sm) {
+      padding: 50px 70px;
+    }
+
+    .panel-body-heading {
+      text-align: center;
+
+      @media screen and (max-width: $breakpoint-sm) {
+        font-size: 24px;
+      }
+    }
+
+    .text-bordered {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.6em;
+      border-bottom: 1px dashed $color-gray-lighter;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        font-size: 16px;
+        line-height: 35px;
+      }
+
+      @media screen and (min-width: $breakpoint-md) {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+    }
+  }
+}
+.panel-custom {
+  border-color: $color-gray-lighter;
+  border-radius: 0;
+
+  .panel-heading {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    img { width: 100%; }
   }
 
-  .panel-body-heading {
-    text-align: center;
+  .panel-body {
 
-    @media screen and (max-width: $breakpoint-sm) {
-      font-size: 24px;
+    @media screen and (min-width: $breakpoint-sm) {
+      padding: 40px;
+    }
+
+    .panel-body-heading { margin-bottom: 6px; text-align: left; }
+
+    .text-bordered {
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
     }
   }
 }

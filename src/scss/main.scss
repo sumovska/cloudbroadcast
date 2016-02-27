@@ -7,12 +7,26 @@
 /* FOOTER
 /*====================================================================================*/
 .footer {
-  padding: 50px 0 20px;
+  padding: 60px 0 20px;
   font: 12px $font-montserrat;
   color: $color-gray;
   background: $color-darkest;
   cursor: default;
   text-align: center;
+  position: relative;
+
+  &:before {
+    height: 10px;
+    display: block;
+    content: '\0020';
+    overflow: hidden;
+    @include gradient-x(#5a28d4, #1a6dc3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
 
   @media screen and (min-width: $breakpoint-xxs) and (max-width: $breakpoint-sm) {
     .col {
@@ -25,7 +39,7 @@
     }
   }
   @media screen and (min-width: $breakpoint-sm) {
-    padding: 40px 0;
+    padding: 50px 0 40px;
   }
 
   a {
@@ -358,7 +372,7 @@
 /* CALL TO ACTION
 /*====================================================================================*/
 .call-to-action {
-  padding: 40px 0;
+  padding: 40px 0 30px;
   cursor: default;
   @include gradient-x(#5a28d4, #1a6dc3);
 
@@ -398,37 +412,18 @@
   }
 }
 /*====================================================================================*/
-/* TEXT-BORDERED
-/*====================================================================================*/
-.text-bordered {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  text-align: center;
-  border-bottom: 1px dashed $color-gray-lighter;
-
-  @media screen and (min-width: $breakpoint-sm) {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    font-size: 16px;
-    line-height: 35px;
-  }
-
-  @media screen and (min-width: $breakpoint-md) {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-/*====================================================================================*/
 /* POLICY
 /*====================================================================================*/
 .policy {
+  font-size: 14px;
+  line-height: 1.6em;
 
   @media screen and (min-width: $breakpoint-sm) {
     font-size: 16px;
     line-height: 1.563em;
   }
 
-  .list {
+  .entry {
     margin-bottom: 20px;
 
     &:last-of-type { margin-bottom: 0; }
@@ -457,13 +452,15 @@
 /* CONTACT-US
 /*====================================================================================*/
 .contact-us {
+  font-size: 14px;
+  line-height: 1.5em;
 
   .form {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px dashed $color-gray-lighter;
 
-    .form-group { margin-bottom: 10px; }
+    .form-group { margin-bottom: 6px; }
 
     @media screen and (min-width: $breakpoint-sm) {
       margin-bottom: 20px;
@@ -473,11 +470,10 @@
 
   .info {
     text-align: center;
-    line-height: 24px;
 
     @media screen and (min-width: $breakpoint-sm) {
       text-align: left;
-      line-height: 2.188em;
+      line-height: 2.5em;
 
       p { margin: 0; }
     }
@@ -488,6 +484,8 @@
 /*====================================================================================*/
 .introduction {
   margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.6em;
 
   .entry {
     padding: 20px 0;
@@ -519,6 +517,8 @@
 /* FEATURES-LIST
 /*====================================================================================*/
 .features-list {
+  font-size: 14px;
+  line-height: 1.6em;
 
   @media screen and (min-width: $breakpoint-sm) {
     font-size: 16px;
@@ -543,7 +543,61 @@
     }
   }
 
-  .img {
-    margin-bottom: 16px;
+  .img { margin-bottom: 16px; }
+}
+/*====================================================================================*/
+/* MAIN
+/*====================================================================================*/
+.main {
+  padding: 25px 0;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 35px 0;
+  }
+}
+/*====================================================================================*/
+/* SUBSCRIBE
+/*====================================================================================*/
+.subscribe {
+  max-width: 400px;
+  margin: 20px auto 0;
+  padding: 28px 24px 24px;
+  color: $color-white;
+  text-align: center;
+  background: $color-black;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    margin-top: 0;
+  }
+
+  .heading {
+    margin-bottom: 14px;
+
+    .icon {
+      width: 21px;
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+      margin-right: 8px;
+    }
+  }
+
+  .text {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .form-group {
+    margin-bottom: 8px;
+
+    .form-control { text-align: center; }
+  }
+
+  .btn {
+    width: 100%;
+    text-transform: uppercase;
+    text-shadow: rgb(205, 46, 13) 2px 2px 0;
   }
 }
