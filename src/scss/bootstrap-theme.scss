@@ -93,7 +93,7 @@ textarea { resize: none; }
 
       > a {
         padding: 10px 20px;
-        line-height: normal;
+        line-height: 1.2em;
 
         @media (min-width: $breakpoint-sm) {
           padding: 7px 12px;
@@ -169,14 +169,61 @@ textarea { resize: none; }
   }
 
   .navbar-toggle {
-    margin: 17px 15px 17px 0;
+    margin: 17px 0;
     border: none;
-    transition: background-color $duration;
-    .icon-bar { height: 3px; background: $color-blue; }
+    border-radius: 0;
+    position: relative;
+    right: 15px;
+    background: $color-dark;
+    @include translate-3d(-220px, 0, 0);
+    @include transition-translate($duration-menu);
+    z-index: 1000;
+
+    .icon-bar { height: 3px; background: $color-white; }
+
+    &.collapsed {
+      background: transparent;
+      @include translate-3d(0, 0, 0);
+      .icon-bar { background: $color-blue; }
+    }
 
     &:focus, &:hover {
       background: $color-dark;
       .icon-bar { background: $color-white; }
+    }
+  }
+
+  .navbar-collapse {
+    width: 250px;
+    padding-top: 9px;
+    height: 100% !important;
+    display: block;
+    background: $color-darkest;
+    border-top: none;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    bottom: 0;
+    @include translate-3d(0, 0, 0);
+    @include transition-translate($duration-menu);
+    z-index: 1000;
+
+    &[aria-expanded="true"].collapsing, &[aria-expanded="true"].in {
+      @include translate-3d(-250px, 0, 0);
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      width: auto;
+      height: auto;
+      padding-top: 0;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      @include translate-3d(0, 0, 0);
+
+      &[aria-expanded="true"].collapsing, &[aria-expanded="true"].in { @include translate-3d(0, 0, 0); }
     }
   }
 }

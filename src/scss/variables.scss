@@ -23,6 +23,7 @@ $color-sky: #08c;
 $color-sky-dark: #005580;
 
 $duration: .2s ease;
+$duration-menu: .4s ease;
 
 $width-sm: 750px;
 $width-md: 970px;
@@ -52,4 +53,18 @@ $breakpoint-lg: 1200px;
   background: -ms-linear-gradient(top, $startColor, $endColor);
   background: -o-linear-gradient(top, $startColor, $endColor);
   background: linear-gradient(to bottom, $startColor, $endColor);
+}
+@mixin translate-3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  -ms-transform: translate3d($x, $y, $z);
+  -o-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+@mixin transition-translate($duration-menu) {
+  -webkit-transition: -webkit-transform $duration;
+  -moz-transition: -moz-transform $duration-menu;
+  -ms-transition: -ms-transform $duration-menu;
+  -o-transition: -o-transform $duration-menu;
+  transition: transform $duration-menu;
 }
