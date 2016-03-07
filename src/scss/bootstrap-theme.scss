@@ -195,11 +195,11 @@ textarea { resize: none; }
 
   .navbar-collapse {
     width: 250px;
-    padding-top: 9px;
+    padding-top: 8px;
     height: 100% !important;
     display: block;
     background: $color-darkest;
-    border-top: none;
+    box-shadow: none;
     position: fixed;
     top: 0;
     right: -250px;
